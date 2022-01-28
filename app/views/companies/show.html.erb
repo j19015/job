@@ -1,0 +1,12 @@
+<h1><%= @company.name %></h1>
+<%  %>
+    
+<%= form_with model: [@company,@company_info],local:true do |f| %>
+
+    <%= f.text_area :info %>
+
+    <%= f.submit "登録" %>
+    
+<% end %>
+
+<%= link_to "企業選択TOPへ戻る" ,companies_path %>

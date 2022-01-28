@@ -1,0 +1,16 @@
+<h1>企業登録</h1>
+<% if @company.errors.any? %>
+    <%= @company.errors.full_messages %>
+<% end %>
+
+<%= form_with model:@company ,local:true do |f| %>
+
+    <h2>企業名</h2>
+    <%= f.text_field :name %>
+    
+    <h2>業界</h2>
+    <%= f.select :kind, [["IT", "IT"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"]], include_blank: "選択して下さい" %>
+    
+    <%= f.submit "登録" %>
+
+<% end %>
