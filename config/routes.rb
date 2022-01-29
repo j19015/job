@@ -3,7 +3,13 @@ Rails.application.routes.draw do
   root to: 'home#top'
   post "/companies/search"=>"companies#search",as: "company_search"
   get "/about"=>"home#about",as: "home_about"
+  get "mypages"=>"mypages#top"
+
   resources :companies do
+    resources :company_infos
+  end
+  
+  resources :mypages do
     resources :company_infos
   end
   #post "/companies/:id"=>"company_infos#create"
