@@ -1,2 +1,13 @@
 <h1>企業一覧ページ</h1>
 <!--<h2><%= #flash[:notice] %></h2>-->
+<hr/>
+<% @company.each do |list| %>
+    <%= link_to company_path(list.id) do %>
+        <p>企業名:<%= list.name %></p>
+    <% end %>
+<% end %>
+
+<%=  link_to "新規登録",new_company_path %>
+
+
+<%= link_to "TOP画面へ戻る",home_about_path %>

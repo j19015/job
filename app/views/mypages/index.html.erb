@@ -1,0 +1,9 @@
+<h1>マイページ</h1>
+
+<h2><%= flash[:notice]%></h2>
+
+<%= link_to "ユーザ情報の編集",edit_user_registration_path %>
+<%= link_to "登録企業へ", mypages_path %>
+
+<%=  link_to "新規登録",new_company_path %>
+<%= link_to "TOP画面へ戻る",home_about_path %>

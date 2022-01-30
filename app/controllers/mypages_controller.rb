@@ -1,12 +1,18 @@
 class MypagesController < ApplicationController
-    def top
-        if current_user
-            redirect_to :mypage
-        end
+    def index
     end
     
-    def mypage
-        
+    def create
+    end
+    
+    def new
+    end
+
+    def mypages
+        @user = User.find_by(user_id: params[:id])
+    end
+    
+    def edit
     end
     
     def user_edit
@@ -15,16 +21,22 @@ class MypagesController < ApplicationController
             flash[:notice]="編集成功"
             redirect_to user_path(@user_info.user_id)
         else
-            render :top
+            render :index
         end
     end
     
-    def user_comopany
-        @user_comopany = CompanyInfo.find(params[:id])
+    def show
+        @company_info = CompanyInfo.find_by(user_id: current_user.id, company_id: params[:id])
+        if @company_info.nil?
+            @company_info=CompanyInfo.new
+        end
     end
-    
+
+    #ストロングパラメータ
+    private
     def user_params
         #送られてきた値（GET、POST）を得る
-        params.require(:user_info).permit(:info)
+        params.require(:company_info).permit(:info)
     end
+    
 end
