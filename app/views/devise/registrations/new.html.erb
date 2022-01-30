@@ -1,49 +1,63 @@
-<h2>Sign up</h2>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id, autofocus: true, autocomplete: "user_id" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :birthday %><br />
-    <%= f.date_field :birthday, autofocus: true, autocomplete: "birthday" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :graduate %><br />
-    <%= f.select :graduate, [["22卒", "22卒"], ["23卒", "23卒"], ["24卒", "24卒"], ["25卒", "25卒"]], include_blank: "選択して下さい",autofocus: true, autocomplete: "graduate" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<body>
+    <div id="login" class="pb-5" style="height:1000px">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12" style="height:700px">
+                       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                          <%= render "devise/shared/error_messages", resource: resource %>
+                          <h3 class="text-center text-info">Sign up</h3>
+                          <div class="form-group">
+                            <label for="username" class="text-info">email:</label><br>
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control"%>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="username" class="text-info">user id:</label><br>
+                            <%= f.text_field :user_id, autofocus: true, autocomplete: "user_id",class: "form-control" %>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="username" class="text-info">name:</label><br>
+                            <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class: "form-control"%>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="username" class="text-info">birthday:</label><br>
+                            <%= f.date_field :birthday, autofocus: true, autocomplete: "birthday",class: "form-control" %>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="username" class="text-info">graduate:</label><br>
+                            <%= f.select :graduate, [["22卒", "22卒"], ["23卒", "23卒"], ["24卒", "24卒"], ["25卒", "25卒"]], include_blank: "選択して下さい",autofocus: true, autocomplete: "graduate",class: "form-control" %>
+                          </div>
+                        
+                          <div class="form-group">
+                            <label for="username" class="text-info">password:</label><br>
+                            <% if @minimum_password_length %>
+                            <em>(<%= @minimum_password_length %> characters minimum)</em>
+                            <% end %><br />
+                            <%= f.password_field :password, autocomplete: "new-password",class: "form-control" %>
+                          </div>
+                        
+                          <div class="form-group">
+                            <label for="username" class="text-info">password confirm:</label><br>
+                            <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class: "form-control"%>
+                          </div>
+                        
+                          <div class="actions">
+                            <%= f.submit "Sign up" %>
+                          </div>
+                        <% end %>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
