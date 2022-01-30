@@ -1,3 +1,25 @@
-
-<h1>ログイン前TOP</h1>
-<p>Find me in app/views/home/top.html.erb</p>
+<div id="app" class=" pt-5">
+    <div>
+        <h1 class="text-center text-white ">就活で得た情報を蓄積していこう</h1>
+        <p class="text-center text-white">後で見返した時に自分の力に、他の人の力に</p>
+    </div>
+    <div class="main mt-5">
+        <div class="stepbox">
+            <%=  render 'newsAPI' %>
+        </div>
+        <div class="stepbox p-1">
+            <div class="sidebar">
+                <ul class="list-group">
+                    <li class="list-group-item text-center"><h2>おすすめ就活サイト</h2></li>
+                    <li class="list-group-item"><a href="#" class="text-dark"style="text-decoration: none;"><%= image_tag "mainavi.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">マイナビ</span></li></a>
+                    <li class="list-group-item"><a href="#" class="text-dark"style="text-decoration: none;"><%= image_tag "rikunabi.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">リクナビ</span></li></a>
+                    <li class="list-group-item"><a href="#" class="text-dark"style="text-decoration: none;"><%= image_tag "kandume.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">新卒の缶詰</span></li></a>
+                    <li class="list-group-item"><a href="#" class="text-dark"style="text-decoration: none;"><%= image_tag "offerbox.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">オファーボックス</span></li></a>
+                    <li class="list-group-item"><a href="#" class="text-dark"style="text-decoration: none;"><%= image_tag "engneer.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">エンジニア就活</span></li></a>
+                    <li class="list-group-item"><a href="#" class="text-dark"style="text-decoration: none;"><%= image_tag "revatec.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">レバテック</span></li></a>
+                </ul>
+            </div>
+            <div class="sidebar"></div>
+        </div>
+    </div>
+</div>

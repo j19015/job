@@ -1,3 +1,62 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.back{
+    background-image: image-url("cafe.jpg");
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
+
+.main{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    padding-left:10%;
+    padding-right:10%;
+}
+.stepbox{
+    margin-bottom:200px;
+    background-color:red;
+    width:60%;
+    height:1000px;
+}
+
+.stepbox:nth-child(2){
+    width:30%;
+    margin-left:5%;
+    display: block;
+}
+.sidebar{
+    width:100%;
+    height:500x;
+    background-color:blue;
+}
+.sidebar:nth-child(2){
+    margin-top:20px;
+    height:450px;
+}
+
+#app {
+    width: 100%;
+    height: 170vh;
+    background-image: image-url("heart.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;
+}
+
+.hami{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+li{
+    font-family: 'Shippori Mincho', serif;
+}

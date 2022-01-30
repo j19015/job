@@ -9,8 +9,21 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require jquery
+
+//= require jquery3
+//= require popper
+//= require bootstrap-sprockets
+
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(window).on('scroll', function(){
+
+  var scrollTop = $(window).scrollTop();
+  var bgPosition = scrollTop / 2;
+
+  if(bgPosition){
+    $('#app').css('background-position', 'center top -'+ bgPosition + 'px');
+  }
+});
