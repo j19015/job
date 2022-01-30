@@ -1,0 +1,49 @@
+<%
+# Your code here!
+
+#各種ライブラリを読み込む
+require 'net/http'
+require 'json'
+require 'uri'
+
+#uriライブラリ>URIモジュール
+#該当するインスタンスを生成して返す
+uri = URI.parse("https://newsapi.org/v2/top-headlines?country=jp&apiKey=1509b00be4d041338443338758efa905")
+# => #<URI::HTTP http://hoge.com>
+
+#net/httpライブラリ>Net::HTTPクラス
+#URL先にGETリクエストを送り、そのボディを"文字列"として返す。
+json = Net::HTTP.get(uri)
+
+#josonライブラリ>JSONモジュール
+#取得したJSON形式の文字列を、Rubyオブジェクトに変換して返す
+news = JSON.parse(json)
+
+#p news["articles"][0]["title"]
+
+#p news["articles"][0]["description"]
+logger.debug(news)
+%>
+<div class="p-1">
+    <ul class="list-group">
+        <li class="list-group-item hami" style="max-width:100%"><h1 class="text-center">最近話題のニュース</h1></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][0]["url"] %>"><%= news["articles"][0]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][1]["url"] %>"><%= news["articles"][1]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][2]["url"] %>"><%= news["articles"][2]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][3]["url"] %>"><%= news["articles"][3]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][4]["url"] %>"><%= news["articles"][4]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][5]["url"] %>"><%= news["articles"][5]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][6]["url"] %>"><%= news["articles"][6]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][7]["url"] %>"><%= news["articles"][7]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][8]["url"] %>"><%= news["articles"][8]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][9]["url"] %>"><%= news["articles"][9]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][10]["url"] %>"><%= news["articles"][10]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][11]["url"] %>"><%= news["articles"][11]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][12]["url"] %>"><%= news["articles"][12]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][13]["url"] %>"><%= news["articles"][13]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][14]["url"] %>"><%= news["articles"][14]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][15]["url"] %>"><%= news["articles"][15]["title"] %></a></li>
+        <li class="list-group-item hami" style="max-width:100%"><a href="<%= news["articles"][16]["url"] %>"><%= news["articles"][16]["title"] %></a></li>
+    </ul>
+    <% logger.debug("aaaaaaaaaa") %>
+</div>
