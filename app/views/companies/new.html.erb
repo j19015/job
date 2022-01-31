@@ -19,7 +19,7 @@
                                 <%= f.text_field :name %>
                                 
                                 <h2 class="pt-5">業界</h2>
-                                <%= f.select :kind, [["IT", "IT"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"]], include_blank: "選択して下さい" %>
+                                <%= f.select :kind, [["IT・通信", "IT・通信"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"],["建築","建築"]], include_blank: "選択して下さい" %>
                                 
                                 <br/>
                                 <%= f.submit "登録" ,class:"mt-5 btn btn-light btn-lg" %>

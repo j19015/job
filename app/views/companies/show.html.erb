@@ -1,15 +1,38 @@
 
 <div id="app">
-    <div class="p-5" style="height:1000px">
+    <div class="p-5" style="height:2300px">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div  class="col-md-12">
-                    <div class="col-md-12 text-center text-light" style="height:700px">
+                    <div class="col-md-12 text-center text-light" style="height:2000px">
                         <h1><%= @company.name %></h1>
                         <div class="h-100 mt-5">        
                             <%= form_with model: [@company,@company_info],class:"h-100",local:true do |f| %>
-                            
+                                <h2>人数</h2>
+                                <%= f.text_field :people,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">資本金</h2>
+                                <%= f.text_field :capital,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">初任給</h2>
+                                <%= f.text_field :fast_money,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">平均年収</h2>
+                                <%= f.text_field :avg_money,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">選考状況</h2>
+                                <%= f.select :selection, [["ES提出前", "ES提出前"], ["ES提出後審査中", "ES提出後審査中"], ["筆記試験前", "筆記試験前"], ["筆記試験後結果待ち", "筆記試験後結果待ち"], ["１次面接前", "１次面接前"], ["１次面接結果待ち", "１次面接結果待ち"], ["2次面接前", "2次面接前"] ,["2次面接後結果待ち", "2次面接後結果待ち"],["最終面接前", "最終面接前"],["最終面接結果待ち", "最終面接結果待ち"], ["内定", "内定"]], include_blank: "選択して下さい",autofocus: true, autocomplete: "graduate",class: "form-control" %>
+                                <h2 class="mt-2">HP</h2>
+                                <%= f.text_field :hp ,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">ID</h2>
+                                <%= f.text_field :intern_id,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">Pass</h2>
+                                <%= f.text_field :intern_pass,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">テスト形式</h2>
+                                <%= f.text_field :test,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">ES締め切り</h2>
+                                <%= f.date_field :finish_es_day,class:" w-50 text-center" %><br>
+                                <h2 class="mt-2">テスト締め切り</h2>
+                                <%= f.date_field :finish_test_day,class:" w-50 text-center" %><br>
+                                <h2>備考</h2>
                                 <%= f.text_area :info,class:"h-50 w-100" %><br>
+                                
                                 <div class="spc pl-5 pr-5">
                                     <div><%= f.submit "登録" ,class:"mt-5 btn btn-light btn-lg"%></div>
                                     <div><%= link_to "企業選択へ戻る" ,companies_path, class:"mt-5 btn btn-light btn-lg"%></div>

@@ -117,3 +117,10 @@ li{
     text-align: right;
     width:30%;
 }
+
+td{
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

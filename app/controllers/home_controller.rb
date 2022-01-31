@@ -7,4 +7,8 @@ class HomeController < ApplicationController
   
   def about
   end
+  
+  def table
+    @company_info=CompanyInfo.where(user_id:current_user.id).page(params[:page]).per(11)
+  end
 end
