@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/8b9bdb18a5.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -25,10 +25,10 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to destroy_user_session_path, method: :delete,class: 'nav-link text-dark'  do %><i class="fas fa-book-open"></i>マニュアル<% end %>
+                <%= link_to destroy_user_session_path, class: 'nav-link text-dark'  do %><i class="fas fa-book-open"></i>マニュアル<% end %>
               </li>
               <li class="nav-item">
-                <%= link_to  destroy_user_session_path, method: :delete,class: 'nav-link text-dark'  do %><i class="fas fa-users"></i>マイページ<% end  %>
+                <%= link_to  mypages_path,class: 'nav-link text-dark'  do %><i class="fas fa-users"></i>マイページ<% end  %>
               </li>
               <li class="nav-item">
                 <%= link_to  destroy_user_session_path, method: :delete,class: 'nav-link text-dark'  do %><i class="fas fa-sign-out-alt"></i>ログアウト<% end  %>
@@ -50,7 +50,7 @@
         <%= content_tag(:div, value, class: "#{key}") %>
       <% end %>
     <%= yield %>
-    
+
     <body>
     <footer class="bg-light text-center text-white">
     <!-- Grid container -->
@@ -59,16 +59,16 @@
       <section class="mb-4">
         <!-- Facebook -->
         <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button" ><i class="fab fa-facebook-f"></i></a>
-  
+
         <!-- Twitter -->
         <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!" role="button" ><i class="fab fa-twitter"></i></a>
-  
+
         <!-- Google -->
         <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button" ><i class="fab fa-google"></i></a>
-  
+
         <!-- Instagram -->
         <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button" ><i class="fab fa-instagram"></i></a>
-  
+
         <!-- Linkedin -->
         <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!" role="button" ><i class="fab fa-linkedin-in"></i></a>
         <!-- Github -->
@@ -77,7 +77,7 @@
       <!-- Section: Social media -->
     </div>
     <!-- Grid container -->
-  
+
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2022 Copyright:
