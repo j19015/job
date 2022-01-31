@@ -5,13 +5,13 @@
     </div>
     <div class="main mt-5">
         <div class="stepbox">
-            <%= image_tag 'top.png',size: '920x1000',class:"p-3" %>
+            <%= image_tag 'top.png',width:'100%',height:'100%',class:"p-3" %>
         </div>
         <div class="stepbox p-1">
-            <div class="sidebar2">
-                <div class="h-100 pt-5"><%= link_to "情報登録",companies_path,class:"btn btn-dark w-100 h-50 bg-info d-flex align-items-center justify-content-center " %></div>
+            <div class="sidebar">
+                <div class="h-100 pt-5"><%= link_to companies_path,class:"btn bg-light text-dark w-100 h-50 bg-info d-flex align-items-center justify-content-center rounded-pill" do %><span class="font"><i class="fas fa-laptop"></i>情報登録</span><% end %></div>
             </div>
-            <div class="sidebar2">
+            <div class="sidebar">
                 <ul class="list-group">
                     <li class="list-group-item text-center"><h2>おすすめ就活サイト</h2></li>
                     <li class="list-group-item"><a href="https://job.mynavi.jp" class="text-dark"style="text-decoration: none;"><%= image_tag "mainavi.png", size: "50x50" %><span style="font-size:30px;line-height:50px;vertical-align: middle;">マイナビ</span></li></a>
