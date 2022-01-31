@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'home#top'
-  get "/home/table"=>"home#table"
+  get "/home/table"=>"home#table",as: "show_company"
   post "/companies/search"=>"companies#search",as: "company_search"
   get "/companies/search"=>"companies#search",as: "company_search_get"
   get "/about"=>"home#about",as: "home_about"
+  
   resources :companies do
     resources :company_infos
   end
