@@ -1,13 +1,24 @@
 
-<h1><%= @company.name %></h1>
-<%  %>
-    
-<%= form_with model: [@company,@company_info],local:true do |f| %>
-
-    <%= f.text_area :info %>
-
-    <%= f.submit "登録" %>
-    
-<% end %>
-
-<%= link_to "企業選択TOPへ戻る" ,companies_path %>
+<div id="app">
+    <div class="p-5" style="height:1000px">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-12">
+                    <div class="col-md-12 text-center text-light" style="height:700px">
+                        <h1><%= @company.name %></h1>
+                        <div class="h-100 mt-5">        
+                            <%= form_with model: [@company,@company_info],class:"h-100",local:true do |f| %>
+                            
+                                <%= f.text_area :info,class:"h-50 w-100" %><br>
+                                <div class="spc pl-5 pr-5">
+                                    <div><%= f.submit "登録" ,class:"mt-5 btn btn-light btn-lg"%></div>
+                                    <div><%= link_to "企業選択へ戻る" ,companies_path, class:"mt-5 btn btn-light btn-lg"%></div>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
