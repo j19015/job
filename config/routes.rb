@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post "/companies/search"=>"companies#search",as: "company_search"
   get "/about"=>"home#about",as: "home_about"
   get "users/edit"=>"device/registration#edit", as: "edit_mypage"
-  get "mypages/:id"=>"mypages#show", as: "show_company"
+  get "home/table"=>"home#table", as: "show_company"
 
   resources :companies do
     resources :company_infos
