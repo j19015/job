@@ -22,10 +22,10 @@
                                                 <li class="list-group-item text-dark" style="text-align:left;padding-left:40%"><%= list.name %></li>
                                             <% end %>
                                         <% end %>
-                                        
+                                        <li class="list-group-item"><%= paginate @company %></li>
                                     </ul>
                                 </div>
-                                <%= paginate @company %>
+                                
                             <% end %>
                             
                             <div class="mt-5">
