@@ -9,8 +9,8 @@ class CompaniesController < ApplicationController
     end
     
     def search
-        @company=Company.where('name like ?',"%#{params[:name]}%")
-        render :index
+        @company=Company.where('name like ?',"%#{params[:name]}%").page(params[:page]).per(10)
+        #render :index
     end
     
     def show
