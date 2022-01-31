@@ -9,14 +9,12 @@ class CompaniesController < ApplicationController
     end
     
     def search
-        @company=Company.where('name like ?',"%#{params[:name]}%")
-        render :index
+        @company=Company.where('name like ?',"%#{params[:name]}%").page(params[:page]).per(10)
+        #render :index
     end
     
     def show
-        logger.debug("^^^^^^^^dd^^")
         @company=Company.find(params[:id])
-        logger.debug("^^^^^^^^^^")
         @company_info=CompanyInfo.find_by(user_id: current_user.id,company_id: params[:id])
         if @company_info.nil?
             @company_info=CompanyInfo.new

@@ -1,0 +1,50 @@
+<%
+# Your code here!
+
+#各種ライブラリを読み込む
+require 'net/http'
+require 'json'
+require 'uri'
+
+#uriライブラリ>URIモジュール
+#該当するインスタンスを生成して返す
+uri = URI.parse("https://weather.tsukumijima.net/api/forecast/city/220010")
+# => #<URI::HTTP http://hoge.com>
+
+#net/httpライブラリ>Net::HTTPクラス
+#URL先にGETリクエストを送り、そのボディを"文字列"として返す。
+json = Net::HTTP.get(uri)
+
+#josonライブラリ>JSONモジュール
+#取得したJSON形式の文字列を、Rubyオブジェクトに変換して返す
+weather = JSON.parse(json)
+
+#p news["articles"][0]["title"]
+
+#p news["articles"][0]["description"]
+logger.debug(weather["forecasts"][0])
+%>
+<ul class="list-group">
+    <li class="list-group-item"><h2><%= weather["title"] %></h2></li>
+    <li class="list-group-item">
+        <div class="spc2">
+            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["date"] %></spn></div>
+            <div><img src="<%= weather["forecasts"][0]["image"]["url"] %>"></div>
+            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["image"]["title"] %></span></div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="spc2">
+            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][1]["date"] %></spn></div>
+            <div><img src="<%= weather["forecasts"][1]["image"]["url"] %>"></div>
+            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][1]["image"]["title"] %></span></div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="spc2">
+            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][2]["date"] %></spn></div>
+            <div><img src="<%= weather["forecasts"][2]["image"]["url"] %>"></div>
+            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][2]["image"]["title"] %></span></div>
+        </div>
+    </li>
+</ul>

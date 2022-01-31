@@ -1,3 +1,126 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.back{
+    background-image: image-url("cafe.jpg");
+    background-attachment:fixed;
+    background-size: 100% 100%;
+}
+
+.main{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    padding-left:10%;
+    padding-right:10%;
+}
+.stepbox{
+    opacity: 0.9;
+    margin-bottom:200px;
+    background-color:red;
+    width:60%;
+    height:1000px;
+}
+
+.stepbox:nth-child(2){
+    opacity: 1.0;
+    width:30%;
+    margin-left:5%;
+    display: block;
+}
+.sidebar{
+    width:100%;
+    height:400px;
+    background-color:blue;
+}
+.sidebar:nth-child(2){
+    margin-top:20px;
+    height:500px;
+}
+
+#app {
+    width: 100%;
+    height: 300h;
+    background-image: image-url("heart.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center top;
+}
+
+.hami{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+li{
+    font-family: 'Shippori Mincho', serif;
+}
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: 1px solid #9C9C9C;
+  background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
+
+.font{
+    font-family: 'Shippori Mincho', serif;
+    font-size:5rem;
+}
+.bor{
+    border-radius: 100vh;
+}
+
+.spc{
+    display:flex;
+}
+.spc> div:nth-child(1){
+    text-align: right;
+    width:50%;
+}
+
+
+
+.spc> div:nth-child(2){
+    text-align: right;
+    width:50%;
+}
+
+.spc2{
+    display:flex;
+}
+.spc2> div:nth-child(1){
+    text-align: left;
+    width:30%;
+}
+
+.spc2> div:nth-child(2){
+    text-align: center;
+    width:30%;
+}
+
+.spc2> div:nth-child(3){
+    text-align: right;
+    width:30%;
+}
+
+td{
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
