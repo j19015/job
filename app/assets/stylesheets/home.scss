@@ -99,3 +99,21 @@ li{
     text-align: right;
     width:50%;
 }
+
+.spc2{
+    display:flex;
+}
+.spc2> div:nth-child(1){
+    text-align: left;
+    width:30%;
+}
+
+.spc2> div:nth-child(2){
+    text-align: center;
+    width:30%;
+}
+
+.spc2> div:nth-child(3){
+    text-align: right;
+    width:30%;
+}
