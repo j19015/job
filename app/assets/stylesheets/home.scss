@@ -21,6 +21,7 @@
     padding-right:10%;
 }
 .stepbox{
+    opacity: 0.9;
     margin-bottom:200px;
     background-color:red;
     width:60%;
@@ -28,35 +29,27 @@
 }
 
 .stepbox:nth-child(2){
+    opacity: 1.0;
     width:30%;
     margin-left:5%;
     display: block;
 }
 .sidebar{
     width:100%;
-    height:500x;
-    background-color:blue;
-}
-.sidebar:nth-child(2){
-    margin-top:20px;
-    height:450px;
-}
-.sidebar2{
-    width:100%;
     height:400px;
     background-color:blue;
 }
-.sidebar2:nth-child(2){
+.sidebar:nth-child(2){
     margin-top:20px;
     height:500px;
 }
 
 #app {
     width: 100%;
-    height: 170vh;
+    height: 300h;
     background-image: image-url("heart.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 200%;
     background-position: center top;
 }
 
@@ -82,4 +75,27 @@ li{
 }
 #login .container #login-row #login-column #login-box #login-form #register-link {
   margin-top: -85px;
+}
+
+.font{
+    font-family: 'Shippori Mincho', serif;
+    font-size:5rem;
+}
+.bor{
+    border-radius: 100vh;
+}
+
+.spc{
+    display:flex;
+}
+.spc> div:nth-child(1){
+    text-align: right;
+    width:50%;
+}
+
+
+
+.spc> div:nth-child(2){
+    text-align: right;
+    width:50%;
 }

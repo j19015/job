@@ -1,26 +1,41 @@
-<h1>企業選択ページ</h1>
-
-<h2><%= flash[:notice]%></h2>
-
-<hr/>
-<% if @company.nil? %>
-    <%= form_with url:company_search_path ,local:true do |f| %>
-        <%= f.text_field :name %>
-        
-        <%= f.submit '検索' %>
-    <% end %>
-<% else %>
-    <% @company.each do |list| %>
-        <%= link_to company_path(list.id) do %> 
-            <p>企業名:<%= list.name %></p>
-        <% end %>
-    <% end %>
-    
-    <%= link_to "検索し直す",companies_path %>
-<% end %>
-<hr/>
-
-<%=  link_to "新規登録",new_company_path %>
-
-
-<%= link_to "TOP画面へ戻る",home_about_path %>
+<div id="app">
+    <div class="p-5" style="height:1000px">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-12">
+                    <div class="col-md-12" style="height:700px">
+                        <div class="text-center text-light"><h1>企業選択ページ</h1>
+                        
+                            <hr/>
+                            <% if @company.nil? %>
+                                <%= form_with url:company_search_path ,local:true do |f| %>
+                                    <%= f.text_field :name ,class:"rounded-pill",:size=>"60"%>
+ 
+                                    <%= button_tag type: 'submit' do %><i class="fa fa-search"></i><% end %>
+                                <% end %>
+                            <% else %>
+                                <div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item bg-secondary text-white spc" style="display:flex"><div>企業検索一覧</div><div><%= link_to "検索し直す",companies_path ,class:"btn btn-light" %></div></li>
+                                        <% @company.each do |list| %>
+                                            <%= link_to company_path(list.id) do %> 
+                                                <li class="list-group-item text-dark" style="text-align:left;padding-left:40%"><%= list.name %></li>
+                                            <% end %>
+                                        <% end %>
+                                    </ul>
+                                </div>
+                            <% end %>
+                            
+                            <div class="mt-5">
+                                <%=  link_to "新規登録",new_company_path ,class:"btn btn-light" %>
+                                
+                                
+                                <%= link_to "TOP画面へ戻る",home_about_path,class:"btn btn-light ml-5" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
