@@ -16,7 +16,7 @@
                             <% else %>
                                 <div>
                                     <ul class="list-group">
-                                        <li class="list-group-item bg-secondary text-white spc" style="display:flex"><div>企業検索一覧</div><div><%= link_to "検索し直す",companies_path ,class:"btn btn-light" %></div></li>
+                                        <li class="list-group-item bg-secondary text-white spc" style="display:flex"><div>企業検索一覧</div><div><%= link_to "再検索",companies_path ,class:"btn btn-light" %></div></li>
                                         <% @company.each do |list| %>
                                             <%= link_to company_path(list.id) do %> 
                                                 <li class="list-group-item text-dark" style="text-align:left;padding-left:40%"><%= list.name %></li>
