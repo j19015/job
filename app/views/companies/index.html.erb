@@ -9,7 +9,7 @@
                             <hr/>
                             <% if @company.nil? %>
                                 <%= form_with url:company_search_path ,local:true do |f| %>
-                                    <%= f.text_field :name ,class:"rounded-pill",:size=>"60"%>
+                                    <%= f.text_field :name ,class:"rounded-pill text-center",:size=>"60"%>
  
                                     <%= button_tag type: 'submit' do %><i class="fa fa-search"></i>検索<% end %>
                                 <% end %>

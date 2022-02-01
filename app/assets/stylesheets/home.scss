@@ -124,3 +124,24 @@ td{
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+#manu{
+    width:60%;
+    height: 300h;
+    background-image:image-url("note.png");
+    margin-left: 20%;
+    //background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.font-note{
+    font-family:"ＭＳ Ｐゴシック";
+    font-size: 2rem;
+}
+.font-mini{
+    font-family:"ＭＳ Ｐゴシック";
+    font-size: 30px;
+}
+.title{
+    font-family:"Arial Black";
+}
