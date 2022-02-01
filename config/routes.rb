@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "/companies/search"=>"companies#search",as: "company_search"
   get "/companies/search"=>"companies#search",as: "company_search_get"
   get "/about"=>"home#about",as: "home_about"
+  get "/manual"=>"home#manual",as: "home_manual"
   
   resources :companies do
     resources :company_infos

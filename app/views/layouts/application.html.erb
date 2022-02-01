@@ -25,7 +25,7 @@
             <ul class="navbar-nav ml-auto">
               <% if user_signed_in? %>
               <li class="nav-item">
-                <%= link_to destroy_user_session_path, class: 'nav-link text-dark'  do %><i class="fas fa-book-open"></i>マニュアル<% end %>
+                <%= link_to home_manual_path, class: 'nav-link text-dark'  do %><i class="fas fa-book-open"></i>マニュアル<% end %>
               </li>
               <li class="nav-item">
                 <%= link_to  mypages_path,class: 'nav-link text-dark'  do %><i class="fas fa-users"></i>マイページ<% end  %>
