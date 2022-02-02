@@ -1,11 +1,11 @@
-<div id="app">
-    <div class="p-5" style="height:1000px">
+<div >
+    <div class="p-5">
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div  class="col-md-12">
-                    <div class="col-md-12" style="height:700px">
-                        <div class="text-center text-light"><h1>企業選択ページ</h1>
-                        
+                    <div class="col-md-12">
+                        <div class="text-center text-light">
+                            <h1>企業選択ページ</h1>
                             <hr/>
                             <% if @company.nil? %>
                                 <%= form_with url:company_search_path ,local:true do |f| %>
