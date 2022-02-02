@@ -19,7 +19,11 @@
                                         <li class="list-group-item bg-secondary text-white spc" style="display:flex"><div>企業検索一覧</div><div><%= link_to "再検索",companies_path ,class:"btn btn-light" %></div></li>
                                         <% @company.each do |list| %>
                                             <%= link_to company_path(list.id) do %> 
-                                                <li class="list-group-item text-dark" style="text-align:left;padding-left:40%"><%= list.name %></li>
+                                                <li class="list-group-item text-dark" style="text-align:left;padding-left:40%"><%= list.name %>
+                                                    <% if current_user.user_id=="root" %>
+                                                        <%= link_to '削除', company_path(list.id), method: :delete,data: {confirm: "削除しますか？"} %>
+                                                    <% end %>
+                                                </li>
                                             <% end %>
                                         <% end %>
                                         <li class="list-group-item"><%= paginate @company %></li>
