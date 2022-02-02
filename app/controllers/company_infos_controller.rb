@@ -14,8 +14,6 @@ class CompanyInfosController < ApplicationController
     
     def update
         @company_info=CompanyInfo.find(params[:id])
-        logger.debug(companyinfo_params)
-        logger.debug(@company_info)
         if @company_info.update(companyinfo_params)
             flash[:notice]="編集成功"
             redirect_to company_path(@company_info.company_id)
@@ -24,6 +22,11 @@ class CompanyInfosController < ApplicationController
             render 'companies/show'
         end
     end
+    
+    def destroy 
+        
+    end
+    
     
     def companyinfo_params
         #送られてきた値を得る
