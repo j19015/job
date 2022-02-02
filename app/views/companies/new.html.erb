@@ -1,11 +1,12 @@
-<div id="app">
-    <div class="p-5" style="height:1000px">
+<div >
+    <div class="p-5" style="height:800px">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div  class="col-md-12">
-                    <div class="col-md-12 text-center text-light" style="height:700px">
+                <div  class="col-md-12 bg-light p-5 circle">
+                    <div class="col-md-12 text-center text-light">
                         <div>
-                            <h1 >企業登録</h1>
+                            <h1 class="text-dark">企業登録</h1>
+                            <hr/>
                             <div class="text-danger">
                                 <% if @company.errors.any? %>
                                     <%= @company.errors.full_messages %>
@@ -15,14 +16,14 @@
                         <div class="mt-2">
                             <%= form_with model:@company ,local:true do |f| %>
                             
-                                <h2 class="pt-5">企業名</h2>
-                                <%= f.text_field :name %>
+                                <h2 class="pt-5 text-dark">企業名</h2>
+                                <%= f.text_field :name,class:"text-center" %>
                                 
-                                <h2 class="pt-5">業界</h2>
+                                <h2 class="pt-5 text-dark">業界</h2>
                                 <%= f.select :kind, [["IT・通信", "IT・通信"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"],["建築","建築"]], include_blank: "選択して下さい" %>
                                 
                                 <br/>
-                                <%= f.submit "登録" ,class:"mt-5 btn btn-light btn-lg" %>
+                                <%= f.submit "登録" ,class:"mt-5 btn btn-secondary btn-lg" %>
                             
                             <% end %>
                         </div>

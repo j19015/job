@@ -4,13 +4,13 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <body>
+    <%= devise_error_messages %>
     <div id="login" class="pb-5" style="height:1000px">
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12" style="height:700px">
                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                          <%= render "devise/shared/error_messages", resource: resource %>
                           <h3 class="text-center text-info">Sign up</h3>
                           <div class="form-group">
                             <label for="username" class="text-info">email:</label><br>
