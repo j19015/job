@@ -6,7 +6,9 @@
     padding:0;
     box-sizing:border-box;
 }
-
+.f_h1{
+    font-size:2.5rem;
+}
 .back{
     background-image: image-url("cafe.jpg");
     background-attachment:fixed;
@@ -164,4 +166,76 @@ td{
 
 .mypage{
   height:600px;  
+}
+
+
+@media screen and (max-width:768px) {
+  .main{
+      display:block;
+  }
+  .w-50{
+      width:100%;
+  }
+}
+
+/* スマートフォンサイズ（425px）以下の際に適用される設定 */
+@media screen and (max-width:425px) {
+    .f_h1{
+        font-size:1.7rem;
+    }
+    .m_0{
+        margin:0;
+    }
+    #app{
+        height:auto;
+        background-attachment:fixed;
+        background-size: cover;
+        background-position:center;
+        background-size: auto;
+    }
+    .main{
+        padding-top:5px;
+    }
+    .social i {
+        color: blue;
+    }
+    .font{
+        font-family: 'Shippori Mincho', serif;
+        font-size:2rem;
+    }
+    .stepbox{
+        width:100%;
+        margin-bottom:0;
+        height:auto;
+        margin-bottom:10px;
+    }
+    .stepbox:nth-child(2){
+        width:100%;
+        margin: 0;
+    }
+    .sidebar{
+    width:100%;
+    
+    //background-color:blue;
+    }
+    .sidebar:nth-child(2){
+        height:auto;
+        padding-bottom:10px;
+    }
+    
+    .ml_5{
+        margin-left:0;
+    }
+    .mt_5{
+        margin-top:20px;
+    }
+    .zero{
+        font-size:0px;
+    }
+    .w_90{
+        width:80%;
+    }
+    .w_600{
+        width:600%;
+    }
 }
