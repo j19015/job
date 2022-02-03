@@ -17,7 +17,7 @@
                             <%= form_with model:@company ,local:true do |f| %>
                             
                                 <h2 class="pt-5 text-dark">企業名</h2>
-                                <%= f.text_field :name,class:"text-center" %>
+                                <%= f.text_field :name,class:"text-center rounded-pill" %>
                                 
                                 <h2 class="pt-5 text-dark">業界</h2>
                                 <%= f.select :kind, [["IT・通信", "IT・通信"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"],["建築","建築"]], include_blank: "選択して下さい" %>
