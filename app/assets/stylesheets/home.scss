@@ -238,4 +238,33 @@ td{
     .w_600{
         width:600%;
     }
+    .p_0{
+        padding: 0 0 0 0;
+    }
+    .h_3{
+        font-size: 0.9rem;
+    }
+    .spc2> div:nth-child(1){
+        text-align: left;
+        width:0;
+    }
+    .spc2> div:nth-child(2){
+        text-align: left;
+        width:60%;
+    }
+    .spc2> div:nth-child(3){
+        text-align: center;
+        width:30%;
+    }
+    .btn_lg{
+        padding: .5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        border-radius: .3rem;
+    }
+    .hami2{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }

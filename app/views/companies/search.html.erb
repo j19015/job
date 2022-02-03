@@ -5,7 +5,7 @@
                 <div  class="col-md-12">
                     <div class="col-md-12">
                         <div class="text-center text-light">
-                            <h1>企業選択ページ</h1>
+                            <h1 class="f_h1">企業選択ページ</h1>
                             <hr/>
                             <% if @company.nil? %>
                                 <%= form_with url:company_search_path ,local:true do |f| %>
@@ -16,14 +16,24 @@
                             <% else %>
                                 <div>
                                     <ul class="list-group">
-                                        <li class="list-group-item bg-secondary text-white spc2 pr-0" style="display:flex"><div></div><div><h3>企業検索一覧</h1></div><div><%= link_to "再検索",companies_path ,class:"btn btn-light btn-lg" %></div></li>
+                                        <li class="list-group-item bg-secondary text-white spc2 pr-0" style="display:flex">
+                                            <div>
+                                                
+                                            </div>
+                                            <div>
+                                                <h1 class="h_3">企業検索一覧</h1>
+                                            </div>
+                                            <div>
+                                                <%= link_to companies_path ,class:"btn btn_lg btn-light p_0" do %><span class="h_3">再検索</span><% end %>
+                                            </div>
+                                        </li>
                                             <% @company.each do |list| %>
                                                 <li class="list-group-item text-dark pr-0">
                                                     <div class="spc2">
                                                         <div></div>
-                                                        <div>
+                                                        <div class="hami2">
                                                             <%= link_to company_path(list.id) do %> 
-                                                                    <%= list.name %>
+                                                                    <span class="hami2"><%= list.name %></span>
                                                             <% end %>
                                                         </div>
                                                         <div>
@@ -42,10 +52,10 @@
                             <% end %>
                             
                             <div class="mt-5">
-                                <%=  link_to "企業新規登録",new_company_path ,class:"btn btn-light" %>
+                                <div><%=  link_to "企業新規登録",new_company_path ,class:"btn btn-light" %> </div>
                                 
                                 
-                                <%= link_to "TOP画面へ戻る",home_about_path,class:"btn btn-light ml-5" %>
+                                <div><%= link_to "TOP画面へ戻る",home_about_path,class:"btn btn-light mt-5" %> </div>
                             </div>
                         </div>
                     </div>

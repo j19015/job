@@ -4,8 +4,8 @@
             <h1>マイページ</h1>
             <hr/>
         </div>
-        <div class="main mt-5 bg-white mypage">
-            <div class="stepbox mt-5 mb-5" style="width:30%; opacity:1">
+        <div>
+            <div class="" >
                 <div class="text-center text-dark"><h3>ユーザ名</h3></div>
                 <div class="text-center text-dark"><h2><%= current_user.name %></h2></div>
                 <div class="text-center text-dark mt-5"><h3>ユーザID</h3></div>
@@ -14,14 +14,9 @@
                 <div class="text-center text-dark"><h2><%= render 'date' %></h2></div>
                 <div class="text-center text-dark mt-5"><h3>卒業年度</h3></div>
                 <div class="text-center text-dark"><h2><%= current_user.graduate %></h2></div>
+                <div class="text-center mt-5"><%= link_to "TOPへ戻る",root_path,class:"btn btn-secondary btn-lg text" %></div>
             </div>
-            <div class="stepbox pl-5 mt-5">
-                <div class="pb-5"><%= link_to "ユーザ情報編集",edit_user_registration_path ,class:"btn btn-secondary btn-lg" %></div>
-                <div class="pb-5"><%= link_to "マイ企業テーブル", show_company_path,class:"btn btn-secondary btn-lg" %></div>
-                <div class="pb-5"><%= link_to "企業情報登録",new_company_path,class:"btn btn-secondary btn-lg" %></div>
-                <div class="pb-5"><%= link_to "企業情報検索",companies_path,class:"btn btn-secondary btn-lg" %></div>
-                <div class="pb-5"><%= link_to "TOP画面へ戻る",home_about_path,class:"btn btn-secondary btn-lg" %></div>
-            </div>
+            
         </div>
     </div>
 </div>
