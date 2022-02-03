@@ -26,6 +26,9 @@
               <ul class="navbar-nav ml-auto">
                 <% if user_signed_in? %>
                 <li class="nav-item">
+                  <%= link_to show_company_path, class: 'nav-link text-dark'  do %><i class="fas fa-table"></i>マイテーブル<% end %>
+                </li>
+                <li class="nav-item">
                   <%= link_to companies_path, class: 'nav-link text-dark'  do %><i class="fas fa-building"></i>企業検索<% end %>
                 </li>
                 <li class="nav-item">

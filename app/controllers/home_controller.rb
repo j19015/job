@@ -13,5 +13,6 @@ class HomeController < ApplicationController
   
   def table
     @company_info=CompanyInfo.where(user_id:current_user.id).page(params[:page]).per(11)
+    #render layout: false
   end
 end
