@@ -22,21 +22,23 @@
                                 <th>テスト締切</th>
                             </tr>
                             <% @company_info.each do |f| %>
-                            <tr>
-                                <td><%= f.company.name %></td>
-                                <td><%= f.company.kind %></td>
-                                <td><%= f.people %></td>
-                                <td><%= f.capital %></td>
-                                <td><%= f.fast_money %></td>
-                                <td><%= f.avg_money %></td>
-                                <td><%= f.selection %></td>
-                                <td><%= f.hp %></td>
-                                <td><%= f.intern_id %></td>
-                                <td><%= f.intern_pass %></td>
-                                <td><%= f.test %></td>
-                                <td><%= f.finish_es_day %></td>
-                                <td><%= f.finish_test_day %></td>
-                            </tr>
+                                <%= link_to company_company_info_path(f.company.id,f.user.id) do %>
+                                    <tr>
+                                        <td><%= f.company.name %></td>
+                                        <td><%= f.company.kind %></td>
+                                        <td><%= f.people %></td>
+                                        <td><%= f.capital %></td>
+                                        <td><%= f.fast_money %></td>
+                                        <td><%= f.avg_money %></td>
+                                        <td><%= f.selection %></td>
+                                        <td><%= f.hp %></td>
+                                        <td><%= f.intern_id %></td>
+                                        <td><%= f.intern_pass %></td>
+                                        <td><%= f.test %></td>
+                                        <td><%= f.finish_es_day %></td>
+                                        <td><%= f.finish_test_day %></td>
+                                    </tr>
+                                <% end %>
                             <% end %>
                             
                         </table>
