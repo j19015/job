@@ -223,7 +223,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
-  pg (= 0.20.0)
+  pg
   puma (~> 3.0)
   rails (~> 5.2.6)
   rails-i18n
