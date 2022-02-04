@@ -9,6 +9,15 @@
 .f_h1{
     font-size:2.5rem;
 }
+.w-200{
+ width:200%;   
+}
+.page{
+    
+}
+.page > pagination{
+    justify-content:left;
+}
 .back{
     background-image: image-url("cafe.jpg");
     background-attachment:fixed;
@@ -109,12 +118,12 @@ li{
 }
 .spc2> div:nth-child(1){
     text-align: left;
-    width:32%;
+    width:20%;
 }
 
 .spc2> div:nth-child(2){
     text-align: center;
-    width:32%;
+    width:40%;
 }
 
 .spc2> div:nth-child(3){
@@ -169,17 +178,85 @@ td{
 }
 
 
-@media screen and (max-width:768px) {
+
+@media screen and (max-width:810px) {
+    .w-200{
+         width:300%;
+    }
+    
+    .f_h1{
+        font-size:1.7rem;
+    }
   .main{
       display:block;
   }
   .w-50{
       width:100%;
   }
+  .stepbox{
+        width:100%;
+        margin-bottom:0;
+        height:auto;
+        margin-bottom:10px;
+    }
+    .stepbox:nth-child(2){
+        width:100%;
+        margin: 0;
+    }
+    #app{
+        height:auto;
+        background-attachment:fixed;
+        background-size: cover;
+        background-position:center;
+        background-size: auto;
+    }
+        .sidebar:nth-child(2){
+        height:auto;
+        padding-bottom:10px;
+    }
+    .f_h1{
+        font-size:1.7rem;
+    }
+    .social i {
+        color: blue;
+    }
+    .font{
+        font-family: 'Shippori Mincho', serif;
+        font-size:2rem;
+    }
+    .h_3{
+        font-size: 1.3rem;
+    }
+    .hami2{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .spc2> div:nth-child(1){
+        text-align: left;
+        width:0;
+    }
+    .spc2> div:nth-child(2){
+        text-align: left;
+        width:60%;
+    }
+    .spc2> div:nth-child(3){
+        text-align: right;
+        width:30%;
+    }
+    .h_4{
+        font-size: 0.9rem;
+    }
 }
 
 /* スマートフォンサイズ（425px）以下の際に適用される設定 */
 @media screen and (max-width:425px) {
+    .h_4{
+        font-size: 0.7rem;
+    }
+    .w-200{
+         width:400%;
+    }
     .f_h1{
         font-size:1.7rem;
     }
