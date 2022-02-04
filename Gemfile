@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6'
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
+# gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -58,5 +58,5 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'kaminari'
 gem 'rails-i18n'
 group :production do
-  gem 'pg'
+  gem 'pg', '0.20.0'
 end
