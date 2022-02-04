@@ -1,51 +1,62 @@
-<% require 'date' %>
-<div>
-    <div class="p-5" style="height:1000px">
-        <div style="display:flex;justify-content:center" >
-            <div class="w-75">
-                <div >
-                    <div class=" text-center bg-light p-0 w_600" style="height:700px">
-                        <table class="table table-striped">
-                            <tr>
-                                <th>会社名</th>
-                                <th>業種</th>
-                                <th>人数</th>
-                                <th>資本金(万)</th>
-                                <th>初任給</th>
-                                <th>平均年収</th>
-                                <th>選考状況</th>
-                                <th>会社のHP</th>
-                                <th>ID</th>
-                                <th>PASS</th>
-                                <th>テスト形式</th>
-                                <th>ES締切</th>
-                                <th>テスト締切</th>
-                            </tr>
-                            <% @company_info.each do |f| %>
-                                <%= link_to company_company_info_path(f.company.id,f.user.id) do %>
-                                    <tr>
-                                        <td><%= f.company.name %></td>
-                                        <td><%= f.company.kind %></td>
-                                        <td><%= f.people %></td>
-                                        <td><%= f.capital %></td>
-                                        <td><%= f.fast_money %></td>
-                                        <td><%= f.avg_money %></td>
-                                        <td><%= f.selection %></td>
-                                        <td><%= f.hp %></td>
-                                        <td><%= f.intern_id %></td>
-                                        <td><%= f.intern_pass %></td>
-                                        <td><%= f.test %></td>
-                                        <td><%= f.finish_es_day %></td>
-                                        <td><%= f.finish_test_day %></td>
-                                    </tr>
-                                <% end %>
-                            <% end %>
-                            
-                        </table>
-                        <%= paginate @company_info %>
-                    </div>
-                </div>
-            </div>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <script src="https://kit.fontawesome.com/8b9bdb18a5.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    </head>
+    
+    <body class="w-200">
+        <% require 'date' %>
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <th>会社名</th>
+                    <th>業種</th>
+                    <th>人数</th>
+                    <th>資本金(万)</th>
+                    <th>初任給</th>
+                    <th>平均年収</th>
+                    <th>選考状況</th>
+                    <th>会社のHP</th>
+                    <th>ID</th>
+                    <th>PASS</th>
+                    <th>テスト形式</th>
+                    <th>ES締切</th>
+                    <th>テスト締切</th>
+                </tr>
+                <% @company_info.each do |f| %>
+                    <%= link_to company_company_info_path(f.company.id,f.user.id) do %>
+                        <tr>
+                            <td><%= f.company.name %></td>
+                            <td><%= f.company.kind %></td>
+                            <td><%= f.people %></td>
+                            <td><%= f.capital %></td>
+                            <td><%= f.fast_money %></td>
+                            <td><%= f.avg_money %></td>
+                            <td><%= f.selection %></td>
+                            <td><%= f.hp %></td>
+                            <td><%= f.intern_id %></td>
+                            <td><%= f.intern_pass %></td>
+                            <td><%= f.test %></td>
+                            <td><%= f.finish_es_day %></td>
+                            <td><%= f.finish_test_day %></td>
+                        </tr>
+                    <% end %>
+                <% end %>
+            </table>
+            <%= paginate @company_info  %>
         </div>
-    </div>
-</div>
+        
+        <div>
+            <div><%= link_to "TOPへ戻る",root_path,class:"btn btn-secondary btn-lg ml-5" %></div>
+        </div>
+    </body>
+</html>
+
