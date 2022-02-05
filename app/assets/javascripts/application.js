@@ -18,7 +18,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(window).on('scroll', function(){
+/*$(window).on('scroll', function(){
 
   var scrollTop = $(window).scrollTop();
   var bgPosition = scrollTop / 2;
@@ -26,4 +26,4 @@ $(window).on('scroll', function(){
   if(bgPosition){
     $('#app').css('background-position', 'center top -'+ bgPosition + 'px');
   }
-});
+});*/

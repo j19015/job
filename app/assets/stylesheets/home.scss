@@ -18,11 +18,6 @@
 .page > pagination{
     justify-content:left;
 }
-.back{
-    background-image: image-url("cafe.jpg");
-    background-attachment:fixed;
-    background-size: 100% 100%;
-}
 
 .main{
     display:flex;
@@ -34,7 +29,6 @@
 .stepbox{
     opacity: 0.9;
     margin-bottom:200px;
-    //background-color:red;
     width:60%;
     height:1000px;
 }
@@ -48,7 +42,6 @@
 .sidebar{
     width:100%;
     height:400px;
-    //background-color:blue;
 }
 .sidebar:nth-child(2){
     margin-top:20px;
@@ -57,7 +50,6 @@
 
 #app {
     width: 100%;
-    height: 300h;
     background-image: image-url("heart.jpg");
     background-repeat: no-repeat;
     background-size: 200%;
@@ -130,7 +122,23 @@ li{
     text-align: right;
     width:32%;
 }
+.spc5{
+    display:flex;
+    font-size: 1.3rem;
+}
+.spc5> div:nth-child(1){
+    text-align: left;
+    width:35%;
+}
 
+.spc5> div:nth-child(2){
+    text-align: center;
+    width:35%;
+}
+.spc5> div:nth-child(3){
+    text-align: right;
+    width:30%;
+}
 td{
     max-width: 120px;
     overflow: hidden;
@@ -177,6 +185,12 @@ td{
   height:600px;  
 }
 
+.rec{
+    font-size:30px;
+    line-height:50px;
+    vertical-align: middle;
+}
+
 
 
 @media screen and (max-width:810px) {
@@ -207,8 +221,6 @@ td{
         height:auto;
         background-attachment:fixed;
         background-size: cover;
-        background-position:center;
-        background-size: auto;
     }
         .sidebar:nth-child(2){
         height:auto;
@@ -247,10 +259,27 @@ td{
     .h_4{
         font-size: 0.9rem;
     }
+    
+    
+    .sidebar{
+        width:100%;
+        height:300px;
+        //background-color:blue;
+    }
 }
 
 /* スマートフォンサイズ（425px）以下の際に適用される設定 */
 @media screen and (max-width:425px) {
+    .sidebar{
+        width:100%;
+        height:300px;
+        //background-color:blue;
+    }
+    .rec{
+        font-size: 1rem;
+        line-height:50px;
+        vertical-align: middle;
+    }
     .h_4{
         font-size: 0.7rem;
     }
@@ -258,17 +287,14 @@ td{
          width:400%;
     }
     .f_h1{
-        font-size:1.7rem;
+        font-size:1.6rem;
     }
     .m_0{
         margin:0;
     }
     #app{
-        height:auto;
         background-attachment:fixed;
-        background-size: cover;
-        background-position:center;
-        background-size: auto;
+        height:250%;
     }
     .main{
         padding-top:5px;
@@ -298,6 +324,9 @@ td{
     .sidebar:nth-child(2){
         height:auto;
         padding-bottom:10px;
+    }
+    .spc5{
+        font-size: 0.8rem;
     }
     
     .ml_5{
