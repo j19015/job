@@ -18,12 +18,12 @@
 //= require turbolinks
 //= require_tree .
 
-$(window).on('scroll', function(){
+/*$(window).on('scroll', function(){
 
   var scrollTop = $(window).scrollTop();
-  var bgPosition = scrollTop / 8;
+  var bgPosition = scrollTop / 2;
 
   if(bgPosition){
     $('#app').css('background-position', 'center top -'+ bgPosition + 'px');
   }
-});
+});*/
