@@ -21,7 +21,7 @@
 $(window).on('scroll', function(){
 
   var scrollTop = $(window).scrollTop();
-  var bgPosition = scrollTop / 4;
+  var bgPosition = scrollTop / 8;
 
   if(bgPosition){
     $('#app').css('background-position', 'center top -'+ bgPosition + 'px');

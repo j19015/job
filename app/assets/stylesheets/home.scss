@@ -18,11 +18,6 @@
 .page > pagination{
     justify-content:left;
 }
-.back{
-    background-image: image-url("cafe.jpg");
-    background-attachment:fixed;
-    background-size: 100% 100%;
-}
 
 .main{
     display:flex;
@@ -34,7 +29,6 @@
 .stepbox{
     opacity: 0.9;
     margin-bottom:200px;
-    //background-color:red;
     width:60%;
     height:1000px;
 }
@@ -48,7 +42,6 @@
 .sidebar{
     width:100%;
     height:400px;
-    //background-color:blue;
 }
 .sidebar:nth-child(2){
     margin-top:20px;
@@ -57,7 +50,6 @@
 
 #app {
     width: 100%;
-    height: 300h;
     background-image: image-url("heart.jpg");
     background-repeat: no-repeat;
     background-size: 200%;
@@ -297,17 +289,15 @@ td{
          width:400%;
     }
     .f_h1{
-        font-size:1.7rem;
+        font-size:1.6rem;
     }
     .m_0{
         margin:0;
     }
     #app{
-        height:300vh;
         background-size: cover;
         background-position:center;
         background-size: auto;
-        background-position: center top;
     }
     .main{
         padding-top:5px;
