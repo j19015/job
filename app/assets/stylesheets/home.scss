@@ -130,7 +130,22 @@ li{
     text-align: right;
     width:32%;
 }
+.spc5{
+    display:flex;
+}
+.spc5> div:nth-child(1){
+    text-align: left;
+    width:30%;
+}
 
+.spc5> div:nth-child(2){
+    text-align: center;
+    width:33%;
+}
+.spc5> div:nth-child(3){
+    text-align: right;
+    width:30%;
+}
 td{
     max-width: 120px;
     overflow: hidden;
