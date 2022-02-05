@@ -132,15 +132,16 @@ li{
 }
 .spc5{
     display:flex;
+    font-size: 1.4rem;
 }
 .spc5> div:nth-child(1){
     text-align: left;
-    width:30%;
+    width:35%;
 }
 
 .spc5> div:nth-child(2){
     text-align: center;
-    width:33%;
+    width:35%;
 }
 .spc5> div:nth-child(3){
     text-align: right;
@@ -190,6 +191,12 @@ td{
 
 .mypage{
   height:600px;  
+}
+
+.rec{
+    font-size:30px;
+    line-height:50px;
+    vertical-align: middle;
 }
 
 
@@ -262,10 +269,27 @@ td{
     .h_4{
         font-size: 0.9rem;
     }
+    
+    
+    .sidebar{
+        width:100%;
+        height:300px;
+        //background-color:blue;
+    }
 }
 
 /* スマートフォンサイズ（425px）以下の際に適用される設定 */
 @media screen and (max-width:425px) {
+    .sidebar{
+        width:100%;
+        height:300px;
+        //background-color:blue;
+    }
+    .rec{
+        font-size: 1rem;
+        line-height:50px;
+        vertical-align: middle;
+    }
     .h_4{
         font-size: 0.7rem;
     }
@@ -313,6 +337,9 @@ td{
     .sidebar:nth-child(2){
         height:auto;
         padding-bottom:10px;
+    }
+    .spc5{
+        font-size: 0.8rem;
     }
     
     .ml_5{

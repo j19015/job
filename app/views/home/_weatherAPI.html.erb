@@ -25,12 +25,12 @@ weather = JSON.parse(json)
 logger.debug(weather)
 %>
 <ul class="list-group">
-    <li class="list-group-item"><h2><%= weather["title"] %></h2></li>
+    <li class="list-group-item"><h2 class="h_3"><%= weather["title"] %></h2></li>
     <li class="list-group-item">
         <div class="spc5">
             <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["date"] %></spn></div>
             <div><img src="<%= weather["forecasts"][0]["image"]["url"] %>"></div>
-            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["image"]["title"] %></span></div>
+            <div><span style="line-height:55px;vertical-align: middle;"class><%= weather["forecasts"][0]["image"]["title"] %></span></div>
         </div>
     </li>
     <li class="list-group-item">
