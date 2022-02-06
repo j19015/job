@@ -35,7 +35,7 @@
                                 
                                 <div class="spc pl-2 pr-2">
                                     <div><%= f.submit "登録" ,class:"mt-5 btn btn-light btn-lg"%></div>
-                                    <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn btn-light btn-lg"%></div>
+                                    <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn btn-light btn-lg",data: {"turbolinks" => false} %></div>
                                 </div>
                             <% end %>
                         </div>
