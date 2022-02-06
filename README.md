@@ -6,24 +6,27 @@
 ## アプリケーション概要
 このアプリケーションでは、就職活動で必要なデータを簡単に管理できるようになっています。
 
-### 制作背景
+## 制作背景
 
 就職活動をしていて、WordやExcelに情報をうまくまとめられないことや、管理場所を把握しておく必要があるという手間がありました。また、インターンのサイトのIDやパスワードも保管しておかなければならないということもあり、就活生の負担が大きくなってしまいます。なので、簡単に情報をまとめることが可能で、簡単に情報を閲覧できるアプリケーションが欲しいという思いから、開発に至りました。
 
-URL
-https://sangi-job2.herokuapp.com/
-http://www.sangi-job.com/(予定)
 
-テスト用アカウント
-ユーザ名：user
-パスワード：password
+## 動作
+* URL: 
+    * https://sangi-job.com
+    * (もしくは)https://www.sangi-job.com/
+    * (見つからない場合は https://sangi-job2.herokuapp.com/)
+    * ↓テスト用アカウント
+    * ユーザ名：user
+    * パスワード：password
 
 ## 制作環境
 * 使用OS: Windows10 Home(20H2,21H2),macOS Monterey(ver.12.1)
 * 開発デバイス: LIFEBOOK(UH75/C3),MacBook Air(2021モデル)
 * 使用エディタ: Vscode,Cloud9(AWS)
 * デプロイ: Heroku
-* ドメイン取得: お名前ドットコム(未反映)
+* ドメイン取得: お名前ドットコム
+* SSL化: cloudflare
 * 技術スタック: Ruby(2.6.3p62),javascript,HTML5/CSS3
 * フレームワーク: Rails(5.2.6),Bootstrap(4.5)
 * リポジトリ: github
@@ -80,23 +83,29 @@ http://www.sangi-job.com/(予定)
 PC・スマホに対応するためにレスポンシブなページで作成しました。また、就活生の悩みを解決するために欲しい情報のデータなどをヒアリングしたり、UIについてレビューしてもらうことで、誰でも簡単に扱えるアプリケーションを制作しました。
 
 ## 今後の展望
-レビューの数が少ないため、まだ完成とは程遠い段階です。なので、実際に必要な機能や必要のない機能などの選定、就活生が欲しいと思っている機能の実装をしていきたいと思っています。
-*　集会所（情報交換の場）
-*　マイテーブルのソート・削除機能
+必要な機能の実装数が少なく、レビューの数も足りていないので、まだ完成とは程遠い段階です。なので、実際に必要な機能や必要のない機能などの選定、就活生が欲しいと思っている機能の実装をしていきたいと思っています。[](https://)
+
+Vue.jsやReactなどのフレームワークを導入してSPAにし、処理を最低限にしていこうと考えております。
+
+* 集会所（情報交換の場）
+* マイテーブルのソート・削除機能
 
 
 ## 各個人の詳細情報
 
 - 高橋　幸希
-github: https://github.com/j19015
-wantedly: https://www.wantedly.com/id/kouki_takahashi_ac
+    - gmail: j19015@sangi.jp
+    - github: https://github.com/j19015
+    - wantedly: https://www.wantedly.com/id/kouki_takahashi_ac
 
 
 - 山本　開世
-github: https://github.com/y-kaisei
-wantedly: https://www.wantedly.com/id/hiraku_yamamoto
+    - gmail: j19022@sangi.jp
+    - github: https://github.com/y-kaisei
+    - wantedly: https://www.wantedly.com/id/hiraku_yamamoto
 
 - 小畑　碧都
-github : https://github.com/j19008
-wantedly : https://www.wantedly.com/id/J19008
+    - gmail: j19008@sangi.jp
+    - github : https://github.com/j19008
+    - wantedly : https://www.wantedly.com/id/J19008
 
