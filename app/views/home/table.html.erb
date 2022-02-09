@@ -19,10 +19,10 @@
                 <tr>
                     <th>会社名</th>
                     <th>業種</th>
-                    <th>人数</th>
+                    <th>人数(人)</th>
                     <th>資本金(万)</th>
-                    <th>初任給</th>
-                    <th>平均年収</th>
+                    <th>初任給(円)</th>
+                    <th>平均年収(円)</th>
                     <th>選考状況</th>
                     <th>会社のHP</th>
                     <th>ID</th>
@@ -34,7 +34,6 @@
                     <th>削除</th>
                 </tr>
                 <% @company_info.each do |f| %>
-                    <%= link_to company_company_info_path(f.company.id,f.user.id) do %>
                         <tr>
                             <td><%= f.company.name %></td>
                             <td><%= f.company.kind %></td>
@@ -43,16 +42,22 @@
                             <td><%= f.fast_money %></td>
                             <td><%= f.avg_money %></td>
                             <td><%= f.selection %></td>
-                            <td><%= f.hp %></td>
+                            <td>
+                                <% if f.hp!=nil && f.hp!="" %>
+                                    <a href="<%= f.hp %>">HP </a> 
+                                <% else %> 
+                                    HP
+                                <% end %>
+                            </td>
                             <td><%= f.intern_id %></td>
                             <td><%= f.intern_pass %></td>
                             <td><%= f.test %></td>
-                            <td><%= f.finish_es_day %></td>
-                            <td><%= f.finish_test_day %></td>
+                            <% require 'date' %>
+                            <td><%= f&.finish_es_day&.strftime("%Y/%m/%d") %></td>
+                            <td><%= f&.finish_test_day&.strftime("%Y/%m/%d") %></td>
                             <td><%= link_to "編集",company_path(f.company.id),class:"btn btn-success" %></td>
                             <td><%= link_to "削除", company_company_info_path(f.company.id,f.id),class:"btn btn-danger",method: :delete,data: {confirm: "削除しますか?"} %></td>
                         </tr>
-                    <% end %>
                 <% end %>
             </table>
             <%= paginate @company_info  %>
