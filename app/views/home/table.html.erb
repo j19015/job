@@ -30,6 +30,8 @@
                     <th>テスト形式</th>
                     <th>ES締切</th>
                     <th>テスト締切</th>
+                    <th>編集</th>
+                    <th>削除</th>
                 </tr>
                 <% @company_info.each do |f| %>
                     <%= link_to company_company_info_path(f.company.id,f.user.id) do %>
@@ -47,6 +49,8 @@
                             <td><%= f.test %></td>
                             <td><%= f.finish_es_day %></td>
                             <td><%= f.finish_test_day %></td>
+                            <td><%= link_to "編集",company_path(f.company.id),class:"btn btn-success" %></td>
+                            <td><%= link_to "削除", company_company_info_path(f.company.id,f.id),class:"btn btn-danger",method: :delete,data: {confirm: "削除しますか?"} %></td>
                         </tr>
                     <% end %>
                 <% end %>
