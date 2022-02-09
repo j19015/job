@@ -18,7 +18,7 @@
       <header class="shadow-sm circle bg-light ml-2 mr-2">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" style="margin-right:0px" href="/"><%= image_tag 'sangi.png', :size => '40x40' %><span style="font-size:30px;line-height:50px;vertical-align: middle;">産技就活支援</span></a>
+            <%= link_to root_path,class:"navbar-brand mt-0",data: {"turbolinks" => false} do %><%= image_tag 'sangi.png', :size => '40x40' %><span style="font-size:30px;line-height:50px;vertical-align: middle;">産技就活支援</span><% end %>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,6 +41,9 @@
                   <%= link_to  destroy_user_session_path, method: :delete,class: 'nav-link text-dark'  do %><i class="fas fa-sign-out-alt"></i>ログアウト<% end  %>
                 </li>
                 <% else %>
+                <li class="nav-item">
+                  <%= link_to "https://teal-starflower-f7b.notion.site/53a1dd64078044ecba63f4eed719b5d7", class: 'nav-link text-dark'  do %><i class="fas fa-book-open"></i>マニュアル<% end %>
+                </li>
                 <li class="nav-item">
                   <%= link_to  new_user_registration_path ,class: 'nav-link text-dark' do %><i class="fas fa-user-plus"></i>新規登録<% end %>
                 </li>

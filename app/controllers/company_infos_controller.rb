@@ -24,7 +24,13 @@ class CompanyInfosController < ApplicationController
     end
     
     def destroy 
-        
+        @company_info=CompanyInfo.find(params[:id])
+        if @company_info.destroy
+            redirect_to show_company_path
+        else
+            flash="削除に失敗しました"
+            redirect_to show_company_path
+        end
     end
     
     
