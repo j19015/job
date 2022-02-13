@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
   resources :mypages do
   end
+  get "*path"=>"home#notfound",as:"not_found"
   #post "/companies/:id"=>"company_infos#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
