@@ -1,0 +1,52 @@
+<div >
+    <div class="p-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="text-center text-light">
+                            <h1 class="f_h1">最近の質問</h1>
+                            <hr/>
+                                <div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item bg-secondary text-white pr-0">
+                                            <h1 class="h_3">質問一覧</h1>
+                                        </li>
+                                        <% @question.each do |list| %>
+                                            <li class="list-group-item text-dark pr-0">
+                                                <div class="spc2">
+                                                    <div class="hami2">
+                                                        <span class="hami2"><%= list.question_kind %></span>
+                                                    </div>
+                                                    <div class="hami2 text-center">
+                                                        <span class="hami2"><%= list.question %></span>
+                                                    </div>
+                                                    
+                                                        <% if current_user.user_id=="root" %>
+                                                            <div><%= link_to '削除', question_path(list.id),class:"btn btn-danger", method: :delete,data: {confirm: "削除しますか？"} %></div>
+                                                        <% else %>
+                                                            <div style="width:0"></div>
+                                                        <% end %>
+                                                    
+                                                </div>
+                                            </li>
+                                                
+                                        <% end %>
+                                        <li class="list-group-item"><%= paginate @question %></li>
+                                    </ul>
+                                </div>
+                                
+                            
+                            <div class="mt-5">
+                                <div><%=  link_to "質問登録",new_question_path ,class:"btn btn-light" %> </div>
+                                
+                                
+                                <div><%= link_to "戻る",home_about_path,class:"btn btn-light mt-5",data: {"turbolinks" => false} %> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
