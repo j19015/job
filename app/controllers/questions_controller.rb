@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
     def index
-        @question=Question.all.page(params[:page]).per(10)
+        @question=Question.all.order(created_at: "DESC").page(params[:page]).per(10)
     end
     
     def new
