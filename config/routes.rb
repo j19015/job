@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get "/companies/search"=>"companies#search",as: "company_search_get"
   get "/about"=>"home#about",as: "home_about"
   get "/manual"=>"home#manual",as: "home_manual"
-  resources :questions
   
+  get "/questions/:kind"=>"questions#search_index",as:"search_index"
+  resources :questions
   resources :companies do
     resources :company_infos
   end
