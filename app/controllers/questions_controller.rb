@@ -3,6 +3,11 @@ class QuestionsController < ApplicationController
         @question=Question.all.order(created_at: "DESC").page(params[:page]).per(10)
     end
     
+    def search_index
+        @question=Question.where(question_kind: params[:kind]).order(created_at: "DESC").page(params[:page]).per(10)
+        render :index
+    end
+    
     def new
         @question=Question.new
     end
