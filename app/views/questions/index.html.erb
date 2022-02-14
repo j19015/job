@@ -10,7 +10,11 @@
                                 <div>
                                     <ul class="list-group">
                                         <li class="list-group-item bg-secondary text-white pr-0">
-                                            <h1 class="h_3">質問一覧</h1>
+                                            <% if params[:kind].blank? %>
+                                                <h1 class="h_3">質問一覧</h1>
+                                            <% else %>
+                                                <h1 class="h_3">質問一覧　(<%= params[:kind] %>)</h1>
+                                            <% end %>
                                         </li>
                                         <% @question.each do |list| %>
                                             <li class="list-group-item text-dark pr-0">
@@ -19,14 +23,14 @@
                                                         <span class="hami2"><%= list.created_at&.strftime("%Y年%m月%d 投稿") %></span>
                                                     </div>
                                                     <div class="hami2 text-center">
-                                                        <span class="hami2"><%= list.question %></span>
+                                                        <span class="hami2 mini text-center"><%= list.question %></span>
                                                     </div>
                                                     
                                                         <% if current_user.user_id=="root" %>
                                                             <div><%= link_to '削除', question_path(list.id),class:"btn btn-danger", method: :delete,data: {confirm: "削除しますか？"} %></div>
                                                         <% else %>
-                                                            <div class="hami2">
-                                                                <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn btn-primary btn-sm" %></span>
+                                                            <div class="hami2 text-right">
+                                                                <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn2 btn2-primary btn2-sm mini" %></span>
                                                             </div>
                                                         <% end %>
                                                     
@@ -44,7 +48,7 @@
                                 
                                 <div><%=  link_to "質問全表示",questions_path ,class:"btn btn-light mt-5" %> </div>
                                 
-                                <div><%= link_to "戻る",home_about_path,class:"btn btn-light mt-5",data: {"turbolinks" => false} %> </div>
+                                <div><%= link_to "　戻る　",home_about_path,class:"btn btn-light mt-5",data: {"turbolinks" => false} %> </div>
                             </div>
                         </div>
                     </div>
