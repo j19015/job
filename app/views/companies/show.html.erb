@@ -8,29 +8,29 @@
                         <hr/>
                         <div class="h-100 mt-5">        
                             <%= form_with model: [@company,@company_info],class:"h-100",local:true do |f| %>
-                                <h2>人数</h2>
-                                <%= f.text_field :people,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">資本金</h2>
-                                <%= f.text_field :capital,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">初任給</h2>
-                                <%= f.text_field :fast_money,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">平均年収</h2>
-                                <%= f.text_field :avg_money,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">選考状況</h2>
+                                <h2 class="h_3">人数</h2>
+                                <%= f.text_field :people,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">資本金</h2>
+                                <%= f.text_field :capital,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">初任給</h2>
+                                <%= f.text_field :fast_money,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">平均年収</h2>
+                                <%= f.text_field :avg_money,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">選考状況</h2>
                                 <%= f.select :selection, [["ES提出前", "ES提出前"], ["ES提出後審査中", "ES提出後審査中"], ["筆記試験前", "筆記試験前"], ["筆記試験後結果待ち", "筆記試験後結果待ち"], ["１次面接前", "１次面接前"], ["１次面接結果待ち", "１次面接結果待ち"], ["2次面接前", "2次面接前"] ,["2次面接後結果待ち", "2次面接後結果待ち"],["最終面接前", "最終面接前"],["最終面接結果待ち", "最終面接結果待ち"], ["内定", "内定"]], include_blank: "選択して下さい",autofocus: true, autocomplete: "graduate",class: "form-control" %>
-                                <h2 class="mt-2">HP</h2>
-                                <%= f.text_field :hp ,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">ID</h2>
-                                <%= f.text_field :intern_id,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">Pass</h2>
-                                <%= f.text_field :intern_pass,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">テスト形式</h2>
-                                <%= f.text_field :test,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">ES締め切り</h2>
-                                <%= f.date_field :finish_es_day,class:" w-50 text-center" %><br>
-                                <h2 class="mt-2">テスト締め切り</h2>
-                                <%= f.date_field :finish_test_day,class:" w-50 text-center" %><br>
-                                <h2>備考</h2>
+                                <h2 class="mt-2 h_3">HP</h2>
+                                <%= f.text_field :hp ,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">ID</h2>
+                                <%= f.text_field :intern_id,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">Pass</h2>
+                                <%= f.text_field :intern_pass,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">テスト形式</h2>
+                                <%= f.text_field :test,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">ES締め切り</h2>
+                                <%= f.date_field :finish_es_day,class:" w-75 text-center" %><br>
+                                <h2 class="mt-2 h_3">テスト締め切り</h2>
+                                <%= f.date_field :finish_test_day,class:"w-75 text-center" %><br>
+                                <h2 class="h_3 mt-2">備考</h2>
                                 <%= f.text_area :info,class:" w-100" %><br>
                                 
                                 <div class="spc pl-2 pr-2">
