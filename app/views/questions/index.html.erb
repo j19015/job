@@ -18,16 +18,16 @@
                                         </li>
                                         <% @question.each do |list| %>
                                             <li class="list-group-item text-dark pr-0">
-                                                <div class="spc2">
+                                                <div class="spc3">
                                                     <div class="hami2">
                                                         <span class="hami2"><%= list.created_at&.strftime("%Y年%m月%d 投稿") %></span>
                                                     </div>
-                                                    <div class="hami2 text-center">
-                                                        <span class="hami2 mini text-center"><%= list.question %></span>
+                                                    <div class=" ">
+                                                        <span class=" mini"><%= list.question %></span>
                                                     </div>
                                                     
                                                         <% if current_user.user_id=="root" %>
-                                                            <div><%= link_to '削除', question_path(list.id),class:"btn btn-danger", method: :delete,data: {confirm: "削除しますか？"} %></div>
+                                                            <div><%= link_to '削除', question_path(list.id),class:"btn2 btn2-danger btn2-sm mini", method: :delete,data: {confirm: "削除しますか？"} %></div>
                                                         <% else %>
                                                             <div class="hami2 text-right">
                                                                 <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn2 btn2-primary btn2-sm mini" %></span>
