@@ -3,10 +3,7 @@
         <div class="container">
             <div class="row justify-content-center align-items-center">
                 <div  class="col-md-12">
-                    <div class="col-md-12">
                         <div class="text-center text-light">
-                            <h1 class="f_h1">企業選択ページ</h1>
-                            <hr/>
                             
                             <% if @company.nil? %>
                                 <%= form_with url:company_search_path ,local:true do |f| %>
@@ -23,7 +20,7 @@
                                                 
                                             </div>
                                             <div>
-                                                <h1 class="h_3">企業検索一覧</h1>
+                                                <h1 class="h_4">企業検索一覧</h1>
                                             </div>
                                             <div>
                                                 <%= link_to companies_path ,class:"btn2 btn2-primary btn2-sm" do %><span class="h_4">再検索</span><% end %>
@@ -47,7 +44,7 @@
                                                 </li>
                                                 
                                             <% end %>
-                                        <li class="list-group-item"><%= paginate @company %></li>
+                                        <li class="list-group-item" ><%= paginate @company %></li>
                                     </ul>
                                 </div>
                                 
@@ -61,7 +58,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
