@@ -30,21 +30,21 @@ weather = JSON.parse(json)
         <div class="spc5">
             <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["date"] %></spn></div>
             <div><img src="<%= weather["forecasts"][0]["image"]["url"] %>"></div>
-            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["image"]["title"] %></span></div>
+            <div class="hami2 pl-1"><span class="hami2" style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][0]["image"]["title"] %></span></div>
         </div>
     </li>
     <li class="list-group-item">
         <div class="spc5">
             <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][1]["date"] %></spn></div>
             <div><img src="<%= weather["forecasts"][1]["image"]["url"] %>"></div>
-            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][1]["image"]["title"] %></span></div>
+            <div class="hami2 pl-1"><span class="hami2" style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][1]["image"]["title"] %></span></div>
         </div>
     </li>
     <li class="list-group-item">
         <div class="spc5">
             <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][2]["date"] %></spn></div>
             <div><img src="<%= weather["forecasts"][2]["image"]["url"] %>"></div>
-            <div><span style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][2]["image"]["title"] %></span></div>
+            <div class="hami2 pl-1"><span class="hami2"style="line-height:55px;vertical-align: middle;"><%= weather["forecasts"][2]["image"]["title"] %></span></div>
         </div>
     </li>
 </ul>
