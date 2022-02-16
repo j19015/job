@@ -86,10 +86,18 @@ td{
   }
 }
 
-
+.bg-blue{
+    background: #f0f8ff;
+}
 .btn2:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
+
+
+.pagination>li>a{
+    padding:5px;
+}
+
 
 .btn2{
     display: inline-block;
