@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   get "/companies/search"=>"companies#search",as: "company_search_get"
   get "/about"=>"home#about",as: "home_about"
   get "/manual"=>"home#manual",as: "home_manual"
+  get "/rally"=>"event#rally",as: "event_rally"
+  
+  post "/event"=>"event#create",as: "event_post"
+  get "/event"=>"event#event_post",as: "events"
+  
+  resources :events do
+  end
   
   resources :companies do
     resources :company_infos

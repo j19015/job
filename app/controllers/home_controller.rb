@@ -11,6 +11,13 @@ class HomeController < ApplicationController
   def manual
   end
   
+  def rally
+    @event = Event.all #データベースから集会所の情報を取得する @変数 = view名.all
+  end
+  
+  def event
+  end
+  
   def table
     @company_info=CompanyInfo.where(user_id:current_user.id).page(params[:page]).per(11)
     #render layout: false

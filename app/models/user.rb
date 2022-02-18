@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :graduate,presence: true
   validates :name,presence: true
   has_many :company_infos, dependent: :destroy
+  has_many :users, dependent: :destroy
 end

@@ -11,6 +11,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">  
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&family=RocknRoll+One&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Noto+Serif+JP:wght@500&family=RocknRoll+One&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Noto+Serif+JP:wght@500&family=RocknRoll+One&family=Yusei+Magic&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -18,13 +33,16 @@
       <header class="shadow-sm circle bg-light ml-2 mr-2">
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container">
-            <a class="navbar-brand" style="margin-right:0px" href="/"><%= image_tag 'sangi.png', :size => '40x40' %><span style="font-size:30px;line-height:50px;vertical-align: middle;">産技就活支援</span></a>
+            <a class="navbar-brand" style="margin-right:0px" href="/"><%= image_tag 'sangi.png', :size => '40x40' %><span style="font-size:30px;line-height:50px;vertical-align: middle;font-family: 'Kiwi Maru', serif;font-family: 'Noto Serif JP', serif;font-family: 'RocknRoll One', sans-serif;">産技就活支援</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav ml-auto">
                 <% if user_signed_in? %>
+                <li class="nav-item">
+                  <%= link_to event_rally_path, class: 'nav-link text-dark'  do %><i class="fas fa-users"></i>イベント<% end %>
+                </li>
                 <li class="nav-item">
                   <%= link_to show_company_path, class: 'nav-link text-dark'  do %><i class="fas fa-table"></i>マイテーブル<% end %>
                 </li>
