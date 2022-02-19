@@ -4,6 +4,7 @@ class Event < ApplicationRecord
     validates :contents,presence: true,length: { minimum: 3, maximum: 50 }
     validates :deadline,presence: true
     validates :event,presence: true
+    validates :join,presence: true
     validates :address,presence: true,length:{ minimum: 3, maximum: 30 }
     validates :address_type,presence: true
     #validates :join,presence: true
