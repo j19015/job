@@ -2,18 +2,22 @@
 <div class="p-5">
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div  class="col-md-12 bg-white p-5 circle mt-5">
+            <div  class="col-md-12 bg-white p-3 circle mt-5">
                 <div class="col-md-12 ">
                     <div class="text-center text-dark">
                         <body>
                             <!-- モーダルを開くボタン・リンク -->
                             <div class="container">
-                                    <h1 class="text-center">イベント</h1>
+                                    <h1 class="text-center f_h1">イベント</h1>
                                 <hr/>
                                 <% @event.each do |f| %>
                                     <div class="row mb-5">
                                         <div class="col-12">
-                                            <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>"><%= f.title %><br><%=f.deadline.strftime("%m月%d日").to_s%><%="　"%><%=f.event%></button>
+                                            <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>">
+                                                <div class="hami2"><%= f.title %></div>
+                                                <div class="hami2"><%=f.deadline.strftime("%m月%d日").to_s%></div>
+                                                <div class="hami2"><%=f.event%></div>
+                                            </button>
                                         </div>
                                     </div>
                                 
@@ -51,7 +55,7 @@
                                         </div>
                                     </div>
                                 <%end%>
-                                <div class="mt-5"><%= link_to "イベントを作成する",events_path,class:"btn btn-secondary ml-5　ml_5" %></div>
+                                <div class="mt-5"><%= link_to "イベント作成",events_path,class:"btn btn-secondary ml-5　ml_5" %></div>
                             </div>
                         </div>
                     </div>

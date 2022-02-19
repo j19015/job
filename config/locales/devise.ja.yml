@@ -29,7 +29,13 @@ ja:
         birthday: 誕生日
         graduate: 卒業年
       event:
-        event: イベント名
+        event: イベントのジャンル
+        title: イベント名
+        contents: 概要
+        deadline: 締切日
+        address: 連絡先
+        address_type: 連絡先の種類
+        join: 制限人数
     models:
       user: ユーザ
   devise:
