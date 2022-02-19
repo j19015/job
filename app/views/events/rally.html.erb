@@ -27,7 +27,7 @@
                                 <% @event.each do |f| %>
                                     <div class="row mb-5">
                                         <div class="col-12">
-                                            <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>"><%= if f.event =="開発" then%><i class="fa-brands fa-android"></i><% elsif if f.event=="イベント" then %><%= f.title %><br><%=f.deadline.strftime("%m月%d日").to_s%><%="　"%><%=f.event%></button>
+                                            <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>"><%= f.title %><br><%=f.deadline.strftime("%m月%d日").to_s%><%="　"%><%=f.event%></button>
                                         </div>
                                     </div>
                                 
