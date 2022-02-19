@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 2022_02_19_160036) do
     t.datetime "finish_test_day"
   end
 
-
   create_table "events", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
@@ -50,20 +49,13 @@ ActiveRecord::Schema.define(version: 2022_02_19_160036) do
     t.string "address"
     t.string "address_type"
     t.integer "join"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "question"
     t.string "question_kind"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "qusetions", force: :cascade do |t|
-    t.string "question"
-    t.string "question_kind"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-
   end
 
   create_table "users", force: :cascade do |t|

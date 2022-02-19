@@ -28,6 +28,8 @@ ja:
         user_id: ユーザID
         birthday: 誕生日
         graduate: 卒業年
+      event:
+        event: イベント名
     models:
       user: ユーザ
   devise:
