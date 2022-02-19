@@ -11,7 +11,9 @@ class HomeController < ApplicationController
   def manual
   end
   
+
   def notfound
+
   end
   
   def table

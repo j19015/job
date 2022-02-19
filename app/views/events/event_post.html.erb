@@ -1,0 +1,50 @@
+<div>
+    <div class="p-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-12 bg-light p-5 circle">
+                    <div class="col-md-12 text-center text-light">
+                        <div>
+                            <h1 class="text-dark">企業登録</h1>
+                            <hr/>
+                            <div class="text-danger">
+                                <% if @event.errors.any? %>
+                                    <%= @event.errors.full_messages %>
+                                <% end %>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <%= form_with model:@event ,local:true do |f| %>
+                            
+                                <h2 class="pt-5 text-dark">タイトル</h2>
+                                <%= f.text_field :title,class:"text-center" %>
+                                
+                                <h2 class="pt-5 text-dark">イベントジャンル</h2>
+                                <%= f.select :event, [["イベント", "イベント"], ["開発", "開発"], ["個別面談", "個別面談"],["GD練習", "GD練習"],["その他", "その他"]], include_blank: "選択して下さい" %>
+                                
+                                <h2 class="pt-5 text-dark">内容</h2>
+                                <%= f.text_area :contents,class:"text-center" %>
+                                
+                                <h2 class="pt-5 text-dark">連絡先</h2>
+                                <%= f.select :address_type, [["Twitter", "Twitter"], ["Instagram", "Instagram"], ["メールアドレス", "メールアドレス"]], include_blank: "選択して下さい" %>
+                                
+                                <h2 class="pt-5 text-dark">連絡先アドレス</h2>
+                                <%= f.text_field :address,class:"text-center" %>
+                                
+                                <h2 class="pt-5 text-dark">募集人数</h2>
+                                <%= f.text_field :join,class:"text-center" %>
+                                
+                                <h2 class="pt-5 text-dark">締切日</h2>
+                                <%= f.date_field :deadline,class:"text-center" %>
+                                
+                                <br/>
+                                <%= f.submit "登録" ,class:"mt-5 btn btn-secondary btn-lg" %>
+                            
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

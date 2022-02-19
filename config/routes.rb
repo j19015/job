@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   get "/companies/search"=>"companies#search",as: "company_search_get"
   get "/about"=>"home#about",as: "home_about"
   get "/manual"=>"home#manual",as: "home_manual"
+  get "/rally"=>"events#rally",as: "event_rally"
+  
+  post "/events"=>"events#create",as: "events_post"
+  get "/events"=>"events#event_post",as: "events"
+  
+  resources :events do
+  end
   
 
   resources :questions,except: [:show]
