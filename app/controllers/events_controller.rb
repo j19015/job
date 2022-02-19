@@ -31,6 +31,6 @@ class EventsController < ApplicationController
     
     def event_params
         #送られてきた値を得る
-        params.require(:event).permit(:title,:contents,:address,:deadline,:event,:address_type)
+        params.require(:event).permit(:title,:contents,:address,:deadline,:event,:address_type,:join)
     end
 end

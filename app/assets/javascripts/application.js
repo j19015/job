@@ -27,3 +27,7 @@ $(window).on('scroll', function(){
     $('#app').css('background-position', 'center top -'+ bgPosition + 'px');
   }
 });
+
+$('#confirmModal').on('hidden.bs.modal', function () {
+    $('body').addClass('modal-open');
+  });
