@@ -1,0 +1,60 @@
+<div>
+    <div class="p-5">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="text-center text-light">
+                            <h1 class="f_h1">最近の質問</h1>
+                            <hr/>
+                                <div>
+                                    <ul class="list-group">
+                                        <li class="list-group-item bg-secondary text-white pr-0">
+                                            <% if params[:kind].blank? %>
+                                                <h1 class="h_3">質問一覧</h1>
+                                            <% else %>
+                                                <h1 class="h_3">質問一覧　(<%= params[:kind] %>)</h1>
+                                            <% end %>
+                                        </li>
+                                        <% @question.each do |list| %>
+                                            <li class="list-group-item text-dark pr-0">
+                                                <div class="spc3">
+                                                    <div class="hami2">
+                                                        <span class="hami2"><%= list.created_at&.strftime("%Y年%m月%d 投稿") %></span>
+                                                    </div>
+                                                    <div class=" ">
+                                                        <span class=" mini"><%= list.question %></span>
+                                                    </div>
+                                                    
+                                                        <% if current_user.user_id=="root" %>
+                                                            <div><%= link_to '削除', question_path(list.id),class:"btn2 btn2-danger btn2-sm mini", method: :delete,data: {confirm: "削除しますか？"} %></div>
+                                                        <% else %>
+                                                            <div class="hami2 text-right">
+                                                                <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn2 btn2-primary btn2-sm mini" %></span>
+                                                            </div>
+                                                        <% end %>
+                                                    
+                                                </div>
+                                            </li>
+                                                
+                                        <% end %>
+                                        <li class="list-group-item"><%= paginate @question %></li>
+                                    </ul>
+                                </div>
+                                
+                            
+                            <div class="mt-5">
+                                <div><%=  link_to "質問登録",new_question_path ,class:"btn btn-light" %> </div>
+                                
+                                <div><%=  link_to "質問全表示",questions_path ,class:"btn btn-light mt-5" %> </div>
+                                
+                                <div><%= link_to "　戻る　",home_about_path,class:"btn btn-light mt-5",data: {"turbolinks" => false} %> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>

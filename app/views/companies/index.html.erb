@@ -1,18 +1,18 @@
 <div>
-    <div class="p-5" style="height:600px">
+    <div class="p-4" style="height:600px">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div  class="col-md-12 bg-white p-5 circle mt-5">
+                <div  class="col-md-12 bg-white pt-5 pb-5 circle mt-5">
                     <div class="col-md-12">
                         <div class="text-center text-dark">
-                            <h1 class="f_h1">企業選択ページ</h1>
+                            <h1 class="h_3">企業検索ページ</h1>
                             <hr/>
                             <% if @company.nil? %>
                                 <div class="pt-5">
                                     <%= form_with url:company_search_path ,local:true do |f| %>
                                         <%= f.text_field :name ,class:"rounded-pill text-center w_90" %>
      
-                                        <%= button_tag type: 'submit' do %><span class="zero">　</span><i class="fa fa-search"></i><span class="zero">検索　</span><% end %>
+                                        <%= button_tag type: 'submit' do %><i class="fa fa-search"></i><% end %>
                                     <% end %>
                                 </div>
                             <% else %>
@@ -31,10 +31,10 @@
                             <% end %>
                             
                             <div class=" mt-5">
-                                <div ><%=  link_to "企業新規登録",new_company_path ,class:"btn btn-secondary" %></div>
+                                <div ><%=  link_to "企業登録",new_company_path ,class:"btn btn-secondary" %></div>
                                 
                                 
-                                <div class="mt-5"><%= link_to "TOP画面へ戻る",home_about_path,class:"btn btn-secondary ml-5　ml_5" %></div>
+                                <div class="mt-5"><%= link_to "戻る",home_about_path,class:"btn btn-secondary ml-5　ml_5",data: {"turbolinks" => false} %></div>
                             </div>
                         </div>
                     </div>

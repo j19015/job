@@ -5,36 +5,43 @@ class CompaniesController < ApplicationController
     end
     
     def index
-       
+       #indexページの呼び出しを行うためのaction
     end
     
     def search
+        #@companyにワイルドカードを用いて検索結果を格納
+        #paginateを用いて1ページに10個の情報が出るようにする
         @company=Company.where('name like ?',"%#{params[:name]}%").page(params[:page]).per(10)
-        #render :index
     end
     
     def show
+        #@companyに対して編集したいページの情報だけ格納
         @company=Company.find(params[:id])
+        #@company_infoに対してもし編集したいページの情報が存在していたら格納
         @company_info=CompanyInfo.find_by(user_id: current_user.id,company_id: params[:id])
+        #ない場合はからのインスタンスを作成しておく
         if @company_info.nil?
+            #@company_infoにCompanyInfoのからのインスタンスを作成
             @company_info=CompanyInfo.new
         end
     end
     
     def new_info
+        #編集した情報を保存する
         @companyinfo=CompanyInfo.new(info:params[:info])
+        #送られてきたデータにはユーザの情報がないので、現在ログインしているユーザの情報を格納
         @companyinfo.user_id=current_user.id
+        #会社のidをgetで取得
         @companyinfo.company_id=params[:id]
+        #@company_infoの取得を試みる
         if @companyinfo.save
+            #成功できたら編集成功をサクセスメッセージに入れておく
             flash[:notice]="編集成功"
             redirect_to company_path(@companyinfo.company_id)
         else
+            #失敗しているのでエラーメッセージを表示するためにshow.html.erbを表示
             render :show
         end
-    end
-    
-    def edit_info
-        
     end
     
     def create
@@ -59,9 +66,13 @@ class CompaniesController < ApplicationController
         
     end
     
+    #登録されているCompanyInfoの情報を削除する
     def destroy
+       #@companyに対して消したい行を格納
        @company=Company.find(params[:id])
+       #消す
        @company.destroy
+       #検索ページに戻る
        redirect_to company_search_path
     end
     

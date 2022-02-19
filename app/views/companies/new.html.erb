@@ -2,25 +2,25 @@
     <div class="p-5" style="height:800px">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div  class="col-md-12 bg-light p-5 circle">
+                <div  class="col-md-12 bg-white p-5 circle">
                     <div class="col-md-12 text-center text-light">
                         <div>
-                            <h1 class="text-dark">企業登録</h1>
+                            <h1 class="text-dark f_h1">企業登録</h1>
                             <hr/>
                             <div class="text-danger">
                                 <% if @company.errors.any? %>
-                                    <%= @company.errors.full_messages %>
+                                    <p>入力内容に誤りがあります。</p>
                                 <% end %>
                             </div>
                         </div>
                         <div class="mt-2">
                             <%= form_with model:@company ,local:true do |f| %>
                             
-                                <h2 class="pt-5 text-dark">企業名</h2>
-                                <%= f.text_field :name,class:"text-center rounded-pill" %>
+                                <h2 class="pt-5 text-dark h_3">企業名</h2>
+                                <%= f.text_field :name,class:"text-center rounded-pill w-100" %>
                                 
-                                <h2 class="pt-5 text-dark">業界</h2>
-                                <%= f.select :kind, [["IT・通信", "IT・通信"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"],["建築","建築"]], include_blank: "選択して下さい" %>
+                                <h2 class="pt-5 text-dark h_3">業界</h2>
+                                <%= f.select :kind, [["IT・通信", "IT・通信"], ["ゲーム", "ゲーム"], ["医療事務", "医療事務"], ["建築", "建築"], ["CG", "CG"], ["保育", "保育"],["建築","建築"],["食品","食品"]], include_blank: "選択して下さい" %>
                                 
                                 <br/>
                                 <%= f.submit "登録" ,class:"mt-5 btn btn-secondary btn-lg" %>

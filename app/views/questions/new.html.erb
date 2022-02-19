@@ -1,0 +1,35 @@
+<div >
+    <div class="p-5" style="height:800px">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div  class="col-md-12 bg-white p-5 circle">
+                    <div class="col-md-12 text-center text-light">
+                        <div>
+                            <h1 class="text-dark f_h1">質問登録</h1>
+                            <hr/>
+                            <div class="text-danger">
+                                <% if @question.errors.any? %>
+                                    <p>入力内容に誤りがあります。</p>
+                                <% end %>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <%= form_with model:@question ,local:true do |f| %>
+                            
+                                <h2 class="pt-5 text-dark h_3">質問</h2>
+                                <div><%= f.text_field :question,class:"text-center rounded-pill w-100" %></div>
+                                
+                                <h2 class="pt-5 text-dark h_3">種類</h2>
+                                <%= f.select :question_kind, [["ガクチカ", "ガクチカ"], ["志望動機", "志望動機"], ["就活の軸", "就活の軸"], ["苦労話", "苦労話"], ["他社比較", "他社比較"], ["成り立ち", "成り立ち"],["趣味","趣味"],["その他","その他"]], include_blank: "選択して下さい" %>
+                                
+                                <br/>
+                                <%= f.submit "登録" ,class:"mt-5 btn btn-secondary btn-lg" %>
+                            
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
