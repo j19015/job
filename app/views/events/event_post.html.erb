@@ -7,10 +7,11 @@
                         <div>
                             <h1 class="text-dark f_h1">イベント投稿</h1>
                             <hr/>
-                            <div class="text-danger">
+                            <div class="text-danger w-100">
+                                
                                 <% if @event.errors.any? %>
                                     <% @event.errors.full_messages.each do |message| %>
-                                    <div class="h_4 text-left">・<%= message %></div>
+                                    <div class="h_4 text-center m-auto">・<%= message %></div>
                                     <% end %>
                                 <% end %>
                             </div>
