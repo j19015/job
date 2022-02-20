@@ -18,6 +18,8 @@ class EventsController < ApplicationController
        if @event.save
           flash[:notice]="投稿成功"
           redirect_to event_rally_path
+       else
+          render :event_post
        end
     end
     

@@ -42,6 +42,8 @@
                 <% if user_signed_in? %>
                 <li class="nav-item">
                   <%= link_to event_rally_path, class: 'nav-link text-dark'  do %><i class="fas fa-users"></i>イベント<% end %>
+                </li>
+                <li class="nav-item">
                   <%= link_to questions_path, class: 'nav-link text-dark'  do %><i class="fas fa-question"></i>質問回答<% end %>
                 </li>
                 <li class="nav-item">
@@ -54,7 +56,7 @@
                   <%= link_to "https://teal-starflower-f7b.notion.site/53a1dd64078044ecba63f4eed719b5d7", class: 'nav-link text-dark'  do %><i class="fas fa-book-open"></i>マニュアル<% end %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to  mypages_path,class: 'nav-link text-dark'  do %><i class="fas fa-users"></i>マイページ<% end  %>
+                  <%= link_to  mypages_path,class: 'nav-link text-dark'  do %><i class="fas fa-user-alt"></i>マイページ<% end  %>
                 </li>
                 <li class="nav-item">
                   <%= link_to  destroy_user_session_path, method: :delete,class: 'nav-link text-dark'  do %><i class="fas fa-sign-out-alt"></i>ログアウト<% end  %>
