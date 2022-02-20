@@ -1,4 +1,7 @@
-
+require 'date'
+<% time = Time.now %>
+<% jst = Time.at(time, in: "+09:00") %>
+<% nowtime=jst.strftime("%Y%m%d").to_i%>
 <div class="p-5">
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -9,13 +12,20 @@
                             <!-- モーダルを開くボタン・リンク -->
                             <div class="container">
                                 <h1 class="text-center f_h1">イベント</h1>
+
                                 <hr/>
                                 <% @event.each do |f| %>
                                     <div class="row mb-5">
                                         <div class="col-12">
+                                         
                                             <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>">
-                                                <div class="hami2"><%= f.title %></div>
-                                                <div class="hami2"><%=f.deadline.strftime("%m月%d日").to_s+"締め切り"%></div>
+                                                <div class="hami2">
+                                                    <%= f.title %>
+                                                    <%if f.deadline.strftime("%Y%m%d").to_i-nowtime<3 then %>
+                                                        <%="　　　　まもなく終了！！"%>
+                                                    <%end%>
+                                                </div>
+                                                <div class="hami2"><%=f.deadline.strftime("%m月%d日").to_s%></div>
                                                 <div class="hami2"><%=f.event%></div>
                                             </button>
                                         </div>
