@@ -2,42 +2,107 @@
     <div class="p-5">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div  class="col-md-12 bg-white circle pb-2">
+                <div  class="col-md-12 bg-white circle pb-3">
                     <div class="col-md-12 text-center text-dark">
                         <h1 class="f_h1 mt-2"><%= @company.name %></h1>
                         <hr/>
+                        <% if !(@company_info.user_id.nil?)  %>
                         <div class="h-100 mt-5 form-group">        
-                            <%= form_with model: [@company,@company_info],class:"h-100",local:true do |f| %>
                                 <h2 class="h_3">人数(人)</h2>
-                                <%= f.text_field :people,class:" m-auto w-75 text-center form-control border-dark",placeholder:"(例)　1030" %><br>
+                                <% if !(@company_info.people==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.people %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">資本金(百万)</h2>
-                                <%= f.text_field :capital,class:" m-auto w-75 text-center form-control border-dark" ,placeholder:"(例)　1000"%><br>
+                                <% if !(@company_info.capital==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.capital %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">初任給(円)</h2>
-                                <%= f.text_field :fast_money,class:" m-auto w-75 text-center form-control border-dark" ,placeholder:"(例)　230000" %><br>
+                                <% if !(@company_info.fast_money==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.fast_money %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">平均年収(円)</h2>
-                                <%= f.text_field :avg_money,class:" m-auto w-75 text-center form-control border-dark" ,placeholder:"(例)　5160000" %><br>
+                                <% if !(@company_info.avg_money==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.avg_money %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">選考状況</h2>
-                                <%= f.select :selection, [["ES提出前", "ES提出前"], ["ES提出後審査中", "ES提出後審査中"], ["筆記試験前", "筆記試験前"], ["筆記試験後結果待ち", "筆記試験後結果待ち"], ["１次面接前", "１次面接前"], ["１次面接結果待ち", "１次面接結果待ち"], ["2次面接前", "2次面接前"] ,["2次面接後結果待ち", "2次面接後結果待ち"],["最終面接前", "最終面接前"],["最終面接結果待ち", "最終面接結果待ち"], ["内定", "内定"]], include_blank: "選択して下さい",autofocus: true, autocomplete: "graduate",class: "form-control" %>
+                                <% if !(@company_info.selection=="") and !(@company_info.selection==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.selection %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">HP</h2>
-                                <%= f.text_field :hp ,class:"m-auto w-75 text-center form-control border-dark",placeholder:"(例)　https://google.com" %><br>
+                                <% if !(@company_info.hp=="") and !(@company_info.hp==nil)%>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.hp %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">ID</h2>
-                                <%= f.text_field :intern_id,class:" m-auto w-75 text-center form-control border-dark" ,placeholder:"(例)　XXXXXXXX" %><br>
+                                <% if !(@company_info.intern_id=="") and !(@company_info.intern_id==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.intern_id %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">Pass</h2>
-                                <%= f.text_field :intern_pass,class:" m-auto w-75 text-center form-control border-dark" ,placeholder:"(例)　YYYYYYY" %><br>
+                                <% if !(@company_info.intern_pass=="") and !(@company_info.intern_pass==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.intern_pass %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">テスト形式</h2>
-                                <%= f.text_field :test,class:" m-auto w-75 text-center form-control border-dark" ,placeholder:"(例)　テストセンター" %><br>
+                                <% if !(@company_info.test=="") and !(@company_info.test==nil)%>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.test %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">ES締め切り</h2>
-                                <%= f.date_field :finish_es_day,class:" m-auto w-75 text-center form-control border-dark" %><br>
+                                <% if !(@company_info.finish_es_day==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.finish_es_day %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="mt-2 h_3">テスト締め切り</h2>
-                                <%= f.date_field :finish_test_day,class:"m-auto w-75 text-center form-control border-dark" %><br>
+                                <% if !(@company_info.finish_test_day==nil) %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.finish_test_day %></p>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
+                                
                                 <h2 class="h_3 mt-2">備考</h2>
-                                <%= f.text_area :info,class:" w-100" ,placeholder:"(例)　会社の弱み、強みなど.." %><br>
+                                <% if !(@company_info.info=="") and !(@company_info.info==nil) %>
+                                    <textarea class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.info %></textarea>
+                                <% else %>
+                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                <% end %>
                                 
                                 <div class="spc pl-2 pr-2">
-                                    <div><%= f.submit "登録" ,class:"mt-5 btn btn-secondary btn-lg"%></div>
+                                     <div><%= link_to "編集" ,edit_company_path(@company.id), class:"mt-5 btn btn-secondary btn-lg",data: {"turbolinks" => false} %></div>
                                     <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn btn-secondary btn-lg",data: {"turbolinks" => false} %></div>
                                 </div>
-                            <% end %>
+                        <% else %>
+                            <div class="spc pl-2 pr-2">
+                                <div><%= link_to "新規登録" ,edit_company_path(@company.id), class:"mt-5 btn btn-success btn-lg",data: {"turbolinks" => false} %></div>
+                                <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn btn-secondary btn-lg",data: {"turbolinks" => false} %></div>
+                            </div>
+                        <%end%>
+                        
                         </div>
                     </div>
                 </div>

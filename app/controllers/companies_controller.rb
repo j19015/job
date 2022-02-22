@@ -26,6 +26,19 @@ class CompaniesController < ApplicationController
         end
     end
     
+    def edit
+        #@companyに対して編集したいページの情報だけ格納
+        logger.debug("aaaaaaaaaaa")
+        @company=Company.find(params[:id])
+        #@company_infoに対してもし編集したいページの情報が存在していたら格納
+        @company_info=CompanyInfo.find_by(user_id: current_user.id,company_id: params[:id])
+        #ない場合はからのインスタンスを作成しておく
+        if @company_info.nil?
+            #@company_infoにCompanyInfoのからのインスタンスを作成
+            @company_info=CompanyInfo.new
+        end
+    end
+    
     def new_info
         #編集した情報を保存する
         @companyinfo=CompanyInfo.new(info:params[:info])
@@ -62,9 +75,6 @@ class CompaniesController < ApplicationController
         
     end
     
-    def edit
-        
-    end
     
     #登録されているCompanyInfoの情報を削除する
     def destroy
