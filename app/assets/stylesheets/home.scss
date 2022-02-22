@@ -18,6 +18,10 @@ th{
 td{
     text-align:center;
 }
+::placeholder {
+   font-size: 0.75em;
+   color: #f2f2f2;
+}
 .a_1{
     //font-family: 'Shippori Mincho', serif;
     display:flex;
