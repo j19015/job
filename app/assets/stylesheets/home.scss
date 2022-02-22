@@ -18,6 +18,48 @@ th{
 td{
     text-align:center;
 }
+.a_1{
+    //font-family: 'Shippori Mincho', serif;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    padding: 30px 43px 30px 50px;
+    width:260px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+    margin-left:10px;
+}
+
+.a_1::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #b0e0e6;
+    border-radius: 20px;
+}
+.a_1::after{
+    content: '';
+    transform: rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #8cb4c4;
+    border-right: 2px solid #8cb4c4;
+}
+.a_1:hover{
+    color:black;
+    background: #d1d1d1;
+    text-decoration: none;
+}
+
 #loading {
   position: fixed;
   top: 0;
