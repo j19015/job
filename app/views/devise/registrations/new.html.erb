@@ -9,36 +9,36 @@
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12 circle2" style="height:700px">
+                    <div id="login-box" class="col-md-12 circle2 pt-2" style="height:700px">
                        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                          <h3 class="text-center text-info">Sign up</h3>
+                          <h3 class="text-center text-info">新規登録</h3>
                           <div class="form-group">
-                            <label for="username" class="text-info">email:</label><br>
+                            <label for="username" class="text-info">メールアドレス:</label><br>
                             <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control"%>
                           </div>
                           
                           <div class="form-group">
-                            <label for="username" class="text-info">user id:</label><br>
+                            <label for="username" class="text-info">ユーザID:</label><br>
                             <%= f.text_field :user_id, autofocus: true, autocomplete: "user_id",class: "form-control" %>
                           </div>
                           
                           <div class="form-group">
-                            <label for="username" class="text-info">name:</label><br>
+                            <label for="username" class="text-info">名前:</label><br>
                             <%= f.text_field :name, autofocus: true, autocomplete: "name" ,class: "form-control"%>
                           </div>
                           
                           <div class="form-group">
-                            <label for="username" class="text-info">birthday:</label><br>
+                            <label for="username" class="text-info">誕生日:</label><br>
                             <%= f.date_field :birthday, autofocus: true, autocomplete: "birthday",class: "form-control" %>
                           </div>
                           
                           <div class="form-group">
-                            <label for="username" class="text-info">graduate:</label><br>
+                            <label for="username" class="text-info">卒業年度:</label><br>
                             <%= f.select :graduate, [["22卒", "22卒"], ["23卒", "23卒"], ["24卒", "24卒"], ["25卒", "25卒"]], include_blank: "選択して下さい",autofocus: true, autocomplete: "graduate",class: "form-control" %>
                           </div>
                         
                           <div class="form-group">
-                            <label for="username" class="text-info">password:</label><br>
+                            <label for="username" class="text-info">パスワード:</label><br>
                             <% if @minimum_password_length %>
                             <em>(<%= @minimum_password_length %> characters minimum)</em>
                             <% end %><br />
@@ -46,12 +46,12 @@
                           </div>
                         
                           <div class="form-group">
-                            <label for="username" class="text-info">password confirm:</label><br>
+                            <label for="username" class="text-info">パスワード(確認)</label><br>
                             <%= f.password_field :password_confirmation, autocomplete: "new-password" ,class: "form-control"%>
                           </div>
                         
                           <div class="actions">
-                            <%= f.submit "Sign up" %>
+                            <%= f.submit "登録" %>
                           </div>
                         <% end %>
                         

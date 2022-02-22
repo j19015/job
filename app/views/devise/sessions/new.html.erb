@@ -8,27 +8,27 @@
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
-                    <div id="login-box" class="col-md-12 circle2">
+                    <div id="login-box" class="col-md-12 circle2 pt-2">
                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-                          <h3 class="text-center text-info">Login</h3>
+                          <h3 class="text-center text-info">ログイン</h3>
                           <div class="form-group">
-                            <label for="username" class="text-info">Userid:</label><br>
+                            <label for="username" class="text-info">ユーザID:</label><br>
                             <%= f.text_field :user_id, autofocus: true, class: "form-control" %>
                           </div>
                         
                           <div class="form-group">
-                            <label for="password" class="text-info">Password:</label><br>
+                            <label for="password" class="text-info">パスワード:</label><br>
                             <%= f.password_field :password, class: "form-control"  %>
                           </div>
                         
                           <% if devise_mapping.rememberable? %>
                             <div class="form-group">
-                              <label for="remember-me" class="text-info"><span>Remember me</span> <span> <%= f.check_box :remember_me,class:"remember-me" %></span></label><br>
+                              <label for="remember-me" class="text-info"><span>パスワードを覚える</span> <span> <%= f.check_box :remember_me,class:"remember-me" %></span></label><br>
                             </div>
                           <% end %>
                         
                           <div class="actions">
-                            <%= f.submit "Log in", class:"btn btn-info btn-md" %>
+                            <%= f.submit "ログイン", class:"btn btn-info btn-md" %>
                           </div>
                         <% end %>
                         

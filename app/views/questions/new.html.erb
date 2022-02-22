@@ -17,7 +17,7 @@
                             <%= form_with model:@question ,local:true do |f| %>
                             
                                 <h2 class="pt-5 text-dark h_3">質問</h2>
-                                <div><%= f.text_field :question,class:"text-center rounded-pill w-100" %></div>
+                                <div><%= f.text_field :question,class:"m-auto w-75 text-center form-control border-dark",placeholder:"あなたが一番最近気になっていることは何ですか？" %></div>
                                 
                                 <h2 class="pt-5 text-dark h_3">種類</h2>
                                 <%= f.select :question_kind, [["ガクチカ", "ガクチカ"], ["志望動機", "志望動機"], ["就活の軸", "就活の軸"], ["苦労話", "苦労話"], ["他社比較", "他社比較"], ["成り立ち", "成り立ち"],["趣味","趣味"],["その他","その他"]], include_blank: "選択して下さい" %>
