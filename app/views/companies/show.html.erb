@@ -10,96 +10,99 @@
                         <div class="h-100 mt-5 form-group">        
                                 <h2 class="h_3">人数(人)</h2>
                                 <% if !(@company_info.people==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.people %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.people %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">資本金(百万)</h2>
                                 <% if !(@company_info.capital==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.capital %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.capital %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">初任給(円)</h2>
                                 <% if !(@company_info.fast_money==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.fast_money %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.fast_money %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">平均年収(円)</h2>
                                 <% if !(@company_info.avg_money==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.avg_money %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.avg_money %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">選考状況</h2>
                                 <% if !(@company_info.selection=="") and !(@company_info.selection==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.selection %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.selection %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">HP</h2>
                                 <% if !(@company_info.hp=="") and !(@company_info.hp==nil)%>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.hp %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.hp %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">ID</h2>
                                 <% if !(@company_info.intern_id=="") and !(@company_info.intern_id==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.intern_id %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.intern_id %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">Pass</h2>
                                 <% if !(@company_info.intern_pass=="") and !(@company_info.intern_pass==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.intern_pass %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.intern_pass %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">テスト形式</h2>
                                 <% if !(@company_info.test=="") and !(@company_info.test==nil)%>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.test %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.test %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">ES締め切り</h2>
                                 <% if !(@company_info.finish_es_day==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.finish_es_day %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.finish_es_day %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="mt-2 h_3">テスト締め切り</h2>
                                 <% if !(@company_info.finish_test_day==nil) %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.finish_test_day %></p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.finish_test_day %></p>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
                                 
                                 <h2 class="h_3 mt-2">備考</h2>
                                 <% if !(@company_info.info=="") and !(@company_info.info==nil) %>
-                                    <textarea class=" m-auto w-75 text-center form-control border-dark"><%= @company_info.info %></textarea>
+                                    <textarea class=" m-auto w-75 text-center form-control border-dark hami2 bg-light"><%= @company_info.info %></textarea>
                                 <% else %>
-                                    <p class=" m-auto w-75 text-center form-control border-dark">該当データ無し</p>
+                                    <p class=" m-auto w-75 text-center form-control border-dark hami2 bg-light">該当データ無し</p>
                                 <% end %>
+
+                                
                                 
                                 <div class="spc pl-2 pr-2">
                                      <div><%= link_to "編集" ,edit_company_path(@company.id), class:"mt-5 btn btn-secondary btn-lg",data: {"turbolinks" => false} %></div>
                                     <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn btn-secondary btn-lg",data: {"turbolinks" => false} %></div>
                                 </div>
                         <% else %>
+                            <p>データが登録されていないので登録して下さい。</p>
                             <div class="spc pl-2 pr-2">
-                                <div><%= link_to "新規登録" ,edit_company_path(@company.id), class:"mt-5 btn btn-success btn-lg",data: {"turbolinks" => false} %></div>
-                                <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn btn-secondary btn-lg",data: {"turbolinks" => false} %></div>
+                                <div><%= link_to "新規登録" ,edit_company_path(@company.id), class:"mt-5 btn2 btn-success btn2-sm",data: {"turbolinks" => false} %></div>
+                                <div><%= link_to "戻る" ,companies_path, class:"mt-5 btn2 btn-secondary btn2-sm",data: {"turbolinks" => false} %></div>
                             </div>
                         <%end%>
                         
