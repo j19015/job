@@ -5,13 +5,12 @@
                 <div  class="col-md-12">
                     <div class="col-md-12">
                         <div class="text-center text-light">
-                            <h1 class="f_h1">最近の質問</h1>
                             <hr/>
                                 <div>
                                     <ul class="list-group">
                                         <li class="list-group-item bg-secondary text-white pr-0">
                                             <% if params[:kind].blank? %>
-                                                <h1 class="h_3">質問一覧</h1>
+                                                <h1 class="h_3">最近の質問</h1>
                                             <% else %>
                                                 <h1 class="h_3">質問一覧　(<%= params[:kind] %>)</h1>
                                             <% end %>
