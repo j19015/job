@@ -25,7 +25,9 @@ td{
    font-size: 0.75em;
    color: #f2f2f2;
 }
-
+.header_font{
+    font-size: 1rem;
+}
 .a_1{
     //font-family: 'Shippori Mincho', serif;
     display:flex;
@@ -412,7 +414,11 @@ td{
     vertical-align: middle;
 }
 
-
+@media screen and (max-width:1200px) {
+    .header_font{
+        font-size: 0.8rem;
+    }
+}
 
 @media screen and (max-width:810px) {
     .w-200{
