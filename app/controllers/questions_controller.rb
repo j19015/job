@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+    before_action :authenticate_user!,only: [:new, :create, :destroy]
     def index
         @question=Question.all.order(created_at: "DESC").page(params[:page]).per(10)
     end

@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!, only: [:table, :day_sort]
   def top
     if current_user
       redirect_to home_about_path

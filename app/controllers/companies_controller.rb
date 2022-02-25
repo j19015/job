@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+    before_action :authenticate_user!
     def new
         #Companyの空インスタンスを作成
         @company=Company.new

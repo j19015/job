@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/Q1FeV1kdWl9S', as: 'rails_admin'
   devise_for :users
   root to: 'home#top'
   get "/home/table"=>"home#table",as: "show_company"
