@@ -29,6 +29,34 @@
     <% if Rails.env.production? %>
       <%= render 'layouts/google_analytics' %>
     <% end %>
+    <script type="application/ld+json">
+    {
+      "@content": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage":{
+        "@type":"WebPage",
+        "@id": "https://www.sangi-job.com"
+      },
+      "headline":"就活をもっと楽に",
+      "description":"就活の情報管理が苦手....就活の情報共有する相手がいない...という方向け",
+      "image":"job/app/assets/images/sangi_job_top.png",
+      "author":{
+        "@type": Person,
+        "name": "著者名",
+        "url": "https://www.wantedly.com/id/kouki_takahashi_ac"
+      },
+      "publicher":{
+        "@type": "Organization",
+        "name": "産技就活支援",
+        "logo": {
+          "@type": "ImageObject",
+          "url": job/app/assets/images/sangi_job_top.png"
+        }
+      },
+      "datepublished": "2022-02-25T20:23:30+09:00",
+      "dateModified": "2022-02-25T20:23:30+09:00",
+    }
+    </script>
   </head>
 
   <body>
