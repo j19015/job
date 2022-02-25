@@ -62,9 +62,11 @@
                                                 
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
-                                                    <% if current_user.id==f.user_id or current_user.name=="root" %>
-                                                        <%= link_to '削除', event_path(f.id),class:"btn btn-danger", method: :delete,data: {confirm: "削除しますか？"} %>
-                                                    <%end%>
+                                                    <%if !(current_user.nil?) %>
+                                                        <% if current_user.id==f.user_id or current_user.name=="root" %>
+                                                            <%= link_to '削除', event_path(f.id),class:"btn btn-danger", method: :delete,data: {confirm: "削除しますか？"} %>
+                                                        <%end%>
+                                                    <% end %>
                                                     
                                                 </div>
                                             </div>
