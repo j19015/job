@@ -12,22 +12,28 @@
                             <!-- モーダルを開くボタン・リンク -->
                             <div class="container">
                                 <h1 class="text-center f_h1">イベント</h1>
-
+                                <h5 class="h_5 text-danger">赤枠は終了間近のイベントです</h5>
                                 <hr/>
                                 <% @event.each do |f| %>
                                     <div class="row mb-5">
                                         <div class="col-12">
-                                         
-                                            <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>">
-                                                <div class="hami2">
-                                                    <%= f.title %>
-                                                    <%if f.deadline.strftime("%Y%m%d").to_i-nowtime<3 then %>
-                                                        <%="　　　　まもなく終了！！"%>
-                                                    <%end%>
-                                                </div>
-                                                <div class="hami2"><%=f.deadline.strftime("%m月%d日").to_s%></div>
-                                                <div class="hami2"><%=f.event%></div>
-                                            </button>
+                                            <%if f.deadline.strftime("%Y%m%d").to_i-nowtime<3 then %>
+                                                <button type="button" class="btn btn-light border border-danger mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>">
+                                                    <div class="hami2 h_3">
+                                                        <%= f.title %>
+                                                    </div>
+                                                    <div class="hami2">日付:<%=f.deadline.strftime("%m月%d日").to_s%></div>
+                                                    <div class="hami2">内容:<%=f.event%></div>
+                                                </button>
+                                            <% else %>
+                                                <button type="button" class="btn btn-light border border-dark mb-12 w-100" data-toggle="modal" data-target="#testModal<%=f.id%>">
+                                                    <div class="hami2 h_3">
+                                                        <%= f.title %>
+                                                    </div>
+                                                    <div class="hami2">日付:<%=f.deadline.strftime("%m月%d日").to_s%></div>
+                                                    <div class="hami2">内容:<%=f.event%></div>
+                                                </button> 
+                                            <%end%>
                                         </div>
                                     </div>
                                 
@@ -53,9 +59,10 @@
                                                         <label><%= f.contents %></label>
                                                     </div>-->
                                                     <div class="h_3 text-left pl-5"><%= "募集ユーザ:"+f.user.name %></div>
-                                                    <div class="h_3 text-left pl-5"><%="締切日："+f.deadline.strftime("%m月%d日").to_s %></div>
+                                                    <div class="h_3 text-left pl-5"><%="開催日："+f.deadline.strftime("%m月%d日").to_s %></div>
                                                     <div class="h_3 text-left pl-5"><%="ジャンル："+f.event %></div>
                                                     <div class="h_3 text-left pl-5"><%="内容:"+f.contents %></div>
+                                                    <div class="h_3 text-left pl-5"><%="連絡先の種類:"+f.address_type %></div>
                                                     <div class="h_3 text-left pl-5"><%="連絡先:"+f.address %></div>
                                                     <div class="h_3 text-left pl-5"><%="先着順:"+f.join.to_s %></div>
                                                 </div>

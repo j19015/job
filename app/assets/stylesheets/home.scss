@@ -505,10 +505,16 @@ td{
         height:300px;
         //background-color:blue;
     }
+    .h_5{
+        font-size: 1.0rem;
+    }
 }
 
 /* スマートフォンサイズ（425px）以下の際に適用される設定 */
 @media screen and (max-width:425px) {
+    .h_5{
+        font-size: 0.7rem;
+    }
     .sidebar{
         width:100%;
         height:300px;

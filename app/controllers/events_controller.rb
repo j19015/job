@@ -2,6 +2,10 @@ class EventsController < ApplicationController
     before_action :authenticate_user!, only: [:event_post, :new, :create, :destroy]
     def rally
         @event=Event.all
+        @destroy_event=Event.where("deadline <= ?", Time.now)
+        @destroy_event.each do |event|
+            event.destroy!
+        end
     end
     
     
