@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+    before_action :authenticate_user!, only: [:event_post, :new, :create, :destroy]
     def rally
         @event=Event.all
     end

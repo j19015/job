@@ -24,7 +24,7 @@
                                                     <div class=" ">
                                                         <span class=" mini"><%= list.question %></span>
                                                     </div>
-                                                    
+                                                    <% if !(current_user.nil?) %>
                                                         <% if current_user.user_id=="root" %>
                                                             <div><%= link_to '削除', question_path(list.id),class:"btn2 btn2-danger btn2-sm mini", method: :delete,data: {confirm: "削除しますか？"} %></div>
                                                         <% else %>
@@ -32,7 +32,7 @@
                                                                 <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn2 btn2-primary btn2-sm mini" %></span>
                                                             </div>
                                                         <% end %>
-                                                    
+                                                    <% end %>
                                                 </div>
                                             </li>
                                                 

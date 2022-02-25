@@ -1,4 +1,5 @@
 class CompanyInfosController < ApplicationController
+    before_action :authenticate_user!
     def create
         @company_info=CompanyInfo.new(companyinfo_params)
         @company_info.user_id=current_user.id
