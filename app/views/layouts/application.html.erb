@@ -4,6 +4,7 @@
     <title>Job</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="keywords" content="産業技術専門学校,静岡,サンギ,SANGI,理工科,みらい情報科,CG技術科,広告・WEBデザイン科,CADデザイン科,コンピュータ科,ゲームクリエイト科,建築科,医療事務科">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -31,21 +32,21 @@
     <% end %>
     <script type="application/ld+json">
     {
-      "@content": "https://schema.org",
+      "@context": "https://schema.org",
       "@type": "Article",
-      "mainEntityOfPage":{
-        "@type":"WebPage",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
         "@id": "https://www.sangi-job.com"
       },
-      "headline":"就活をもっと楽に",
-      "description":"就活の情報管理が苦手....就活の情報共有する相手がいない...という方向け",
-      "image":"job/app/assets/images/sangi_job_top.png",
-      "author":{
+      "headline": "就活をもっと楽に",
+      "description": "就活の情報管理が苦手....就活の情報共有する相手がいない...という方向け",
+      "image": "job/app/assets/images/sangi_job_top.png",
+      "author": {
         "@type": "Person",
-        "name": "著者名",
+        "name": "高橋幸希",
         "url": "https://www.wantedly.com/id/kouki_takahashi_ac"
       },
-      "publicher":{
+      "publicher": {
         "@type": "Organization",
         "name": "産技就活支援",
         "logo": {
