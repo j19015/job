@@ -32,6 +32,10 @@
                                                                 <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn2 btn2-primary btn2-sm mini" %></span>
                                                             </div>
                                                         <% end %>
+                                                    <% else %>
+                                                        <div class="hami2 text-right">
+                                                            <span class="hami2"><%= link_to list.question_kind,search_index_path(list.question_kind),class: "btn2 btn2-primary btn2-sm mini" %></span>
+                                                        </div>
                                                     <% end %>
                                                 </div>
                                             </li>
